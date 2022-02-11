@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import {
   Button,
@@ -8,31 +9,17 @@ import {
   View,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import SanarLogo from './components/SanarLogo';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import SanarLogo from './components/SanarLogo/SanarLogo';
+import { MainStack } from './routes/Routes';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Text style={styles.sectionTitle}>Sanar App</Text>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionDescription}>
-          Acessos a milhares de artigos online.
-        </Text>
-        <View style={styles.image}>
-          <SanarLogo />
-        </View>
-        <View style={styles.button}>
-          <Button title="Começar" />
-        </View>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+        <MainStack />
+    </NavigationContainer>
+
   );
 };
 
