@@ -9,3 +9,8 @@ https://www.reactnativeschool.com/setup-jest-tests-with-react-navigation
 https://stackoverflow.com/questions/66652403/jest-config-is-throwing-type-errorhandler-error-mixed-isfatal-boolean
 
 https://reactnavigation.org/docs/testing/
+
+
+# configurando telas principais
+
+utilização de styled components
