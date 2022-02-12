@@ -42,7 +42,7 @@ const SignIn = () => {
       />
       <RegisterTextView>
         <MessageRegisterView>Não possui um acesso?</MessageRegisterView>
-        <SignUpTouchable>
+        <SignUpTouchable onPress={() => navigation.navigate('SignUp')}>
           <TitleSignUpTouchable>Cadastre-se aqui</TitleSignUpTouchable>
         </SignUpTouchable>
       </RegisterTextView>

@@ -1,7 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { LogBox, StatusBar } from 'react-native';
-
 import MainStack from './routes/Routes';
 
 LogBox.ignoreLogs([
