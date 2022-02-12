@@ -4,10 +4,12 @@ import Onboarding from '../screens/Onboarding/Onboarding';
 
 const Stack = createStackNavigator();
 
-export const MainStack = () => {
+function MainStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Onboarding" component={Onboarding} />
     </Stack.Navigator>
   );
 }
+
+export default MainStack;

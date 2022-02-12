@@ -1,15 +1,12 @@
-import React from "react";
-import { Text, View, SafeAreaView } from "react-native";
+import React from 'react';
+import { SafeAreaView, Text } from 'react-native';
 
-
-const Onboarding = () => {
-    console.log('Michel')
-    return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: 'red' }}>
-                <Text>Ola</Text>
-        </SafeAreaView>
-
-    )
+function Onboarding() {
+  return (
+    <SafeAreaView>
+      <Text>Ola</Text>
+    </SafeAreaView>
+  );
 }
 
 export default Onboarding;
