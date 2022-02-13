@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { Alert, StatusBar, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import SignInputs from '../../components/Inputs/SignInputs';
+import { InputValidation } from '../../components/InputValidation/InputValidation';
 import SignButton from '../../components/SignButton/SignButton';
+import { validationEmail, validationPassword } from '../../utils/Validation';
 import { doLoginRequest } from './bussiness';
-
 import {
   Container,
   ImageLogoSignIn,
@@ -36,102 +37,20 @@ const SignIn = () => {
 
   const onError = () => {
     Alert.alert('Dados Invalidos');
-    // setLoader(false);
   };
 
   const onLoginPressButton = () => {
     // setLoader(true)
+    //    if(email && password)validateEmail({ email });
+    if (!validationPassword(password)) {
+      console.log('Alerta password Incorreto');
+      return;
+    }
+    if (!validationEmail(email)) {
+      console.log('Alerta email Incorreto');
+      return;
+    }
     doLoginRequest({ email, password, onSuccess, onError });
-  };
-
-  // const handleLogin = async () => {
-  //   const result = await doLogin({ email: email, password: password });
-  //   if (result === 'FORBIDDEN') {
-  //     Alert.alert('resultado', result);
-  //   } else {
-  //     Alert.alert('Entrou');
-  //   }
-  //   // const listErrors = validateLogin(email, password);
-  //   // console.log(listErrors);
-  //   // if (listErrors.length >= 0) {
-  //   //   console.log('e', 'erro');
-  //   // }
-  // };
-
-  const validateLogin = (email: string, password: string) => {
-    const listErrors = [];
-    // bloco email
-    if (email === null || email === '') {
-      for (let i = 0; i < email.length; i++) {
-        const character = email.charAt(i);
-        if (character === '@') {
-          listErrors.push('O e-mail deve possuir arroba(@)');
-        }
-
-        if (character === '@') {
-          listErrors.push('O e-mail deve possuir arroba(@)');
-        }
-      }
-
-      listErrors.push('Validação de email');
-    }
-
-    // bloco password
-    if (password === null || password === '') {
-      let letterUpper = false;
-      let letterLower = false;
-      let haveNumber = false;
-      let haveSpecialCharacter = false;
-
-      // Mínimo de 8 caracteres.
-      if (password.length < 8) {
-        listErrors.push('A senha precisa de pelo menos 8 caracteres');
-      }
-
-      // Pelo menos 1 caractere maiúsculo.
-      // Pelo menos 1 caractere minúsculo.
-      // Pelo menos 1 dígito.
-      for (let i = 0; i < password.length; i++) {
-        // UpperCase
-        const character = password.charAt(i);
-        if (
-          character === character.toUpperCase() &&
-          character !== character.toLowerCase()
-        )
-          letterUpper = true;
-
-        // LowerCase
-        if (
-          character === character.toLowerCase() &&
-          character !== character.toUpperCase()
-        )
-          letterLower = true;
-
-        // IsNumeric
-        if (!isNaN(parseFloat(character)) && isFinite(parseInt(character))) {
-          haveNumber = true;
-        }
-
-        if (!/^[a-zA-Z0-9]+$/.test(character)) {
-          haveSpecialCharacter = true;
-        }
-      }
-
-      if (!letterUpper)
-        listErrors.push('A senha precisa de pelo menos 1 caracter maiusculo');
-
-      if (!letterLower)
-        listErrors.push('A senha precisa de pelo menos 1 caracter minusculo');
-
-      if (!haveNumber) {
-        listErrors.push('A senha precisa de pelo menos 1 digito');
-      }
-
-      if (haveSpecialCharacter) {
-        listErrors.push('A senha precisa de pelo menos 1 caracter especial');
-      }
-    }
-    return listErrors;
   };
 
   return (
@@ -139,23 +58,31 @@ const SignIn = () => {
       <StatusBar barStyle="light-content" />
       <ImageLogoSignIn
         source={require('../../components/SanarLogo/Logo-negativo.png')}
+        resizeMode="contain"
       />
       <ImageProfile
         source={require('../../components/SanarLogo/profile.png')}
       />
       <InputAreaView>
-        <SignInputs
-          placeholderTextColor={Themes.colors.whiteOpacity}
+        <InputValidation
+          password={email}
           placeholder="Digite seu e-mail"
-          value={email}
-          onChangeText={(text: string) => setEmail(text)}
-        />
-        <SignInputs
           placeholderTextColor={Themes.colors.whiteOpacity}
-          placeholder="Digite sua senha de acesso"
-          value={password}
-          onChangeText={(text: string) => setPassword(text)}
-          secureTextEntry={true}
+          onChangeText={(text: string) => {
+            setEmail(text);
+          }}
+          secureText={false}
+          isInputValid={validationEmail(email)}
+        />
+        <InputValidation
+          password={password}
+          placeholder="Digite sua senha"
+          placeholderTextColor={Themes.colors.whiteOpacity}
+          onChangeText={(text: string) => {
+            setPassword(text);
+          }}
+          secureText={true}
+          isInputValid={validationPassword(password)}
         />
       </InputAreaView>
       <SignButton onPress={onLoginPressButton} title="Entrar" />

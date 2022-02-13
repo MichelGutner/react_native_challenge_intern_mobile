@@ -5,14 +5,9 @@ import { Modal, ImageLogoSignIn, ViewContainer } from './styles';
 
 interface Modal extends ModalProps {
   visible: boolean;
-  onClose: boolean;
 }
 
-const Loading = ({ visible, onClosed }: Modal) => {
-  const onClose = () => {
-    onClosed();
-  };
-
+const Loading = ({ visible }: Modal) => {
   return (
     <Modal visible={visible}>
       <ViewContainer>

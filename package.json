@@ -22,6 +22,7 @@
     "react-native-screens": "^3.11.1",
     "react-native-simple-modal": "^9.0.1",
     "react-native-toast-message": "v2",
+    "react-native-vector-icons": "^9.1.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
