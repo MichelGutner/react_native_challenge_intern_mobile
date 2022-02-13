@@ -187,7 +187,9 @@ exports[`renders correctly 1`] = `
         ]
       }
     >
-      Não possui um acesso?
+      <Text>
+        Não possui um acesso?
+      </Text>
     </Text>
     <View
       accessible={true}

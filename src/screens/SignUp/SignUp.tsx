@@ -1,9 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
+import Loading from '../../components/loading/Loading';
 import React, { useState } from 'react';
 import { Alert, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import SignInputs from '../../components/Inputs/SignInputs';
-import { doCreateUser } from '../../services/loginAPI';
 import {
   ButtonRegister,
   Container,
@@ -12,6 +12,7 @@ import {
   RegisterTextAlert,
   TitleButtonRegister,
 } from './styles';
+import { handleRequeriRegisterButton } from './bussiness';
 
 const FinishRegisterText = (props: {
   children:
@@ -32,19 +33,43 @@ const SignUp = () => {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async () => {
-    const result = await doCreateUser({
-      username: username,
-      email: email,
-      password: password,
-    });
-    if (result === 'OK') {
-      Alert.alert('Conta criada com sucesso.');
-      navigation.navigate('SignIn');
-    }
+  const onSuccess = () => {
+    setLoading(false);
+    Alert.alert('Sucesso', 'Clique em OK para ir para tela de login', [
+      { text: 'OK', onPress: () => navigation.navigate('SignIn') },
+    ]);
+  };
+  const onError = () => {
+    setLoading(false);
   };
 
+  const onSignUpPressButton = () => {
+    setLoading(true);
+    handleRequeriRegisterButton({
+      username,
+      email,
+      password,
+      onSuccess,
+      onError,
+    });
+  };
+
+  // const handleSubmit = async () => {
+  //   setLoading(true);
+  //   const result = await doCreateUser({
+  //     username: username,
+  //     email: email,
+  //     password: password,
+  //   });
+  //   if (result === 'OK') {
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // };
+
+  // console.log(loading);
   return (
     <Container>
       <ImageLogoSignUp
@@ -70,7 +95,7 @@ const SignUp = () => {
           onChangeText={(text: string) => setPassword(text)}
         />
       </InputAreaView>
-      <ButtonRegister onPress={handleSubmit}>
+      <ButtonRegister onPress={onSignUpPressButton}>
         <TitleButtonRegister>Finalizar Cadastro</TitleButtonRegister>
       </ButtonRegister>
       <RegisterTextAlert>
@@ -78,6 +103,7 @@ const SignUp = () => {
         <FinishRegisterText>“Finalizar cadastro”</FinishRegisterText> você
         estará aceitando também nossos termos e condições.
       </RegisterTextAlert>
+      <Loading visible={loading} onClose={() => setLoading(false)} />
     </Container>
   );
 };

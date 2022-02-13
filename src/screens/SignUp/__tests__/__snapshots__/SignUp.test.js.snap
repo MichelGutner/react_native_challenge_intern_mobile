@@ -202,5 +202,18 @@ exports[`renders correctly 1`] = `
     </Text>
      você estará aceitando também nossos termos e condições.
   </Text>
+  <Modal
+    hardwareAccelerated={false}
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+    visible={false}
+  />
 </RCTSafeAreaView>
 `;

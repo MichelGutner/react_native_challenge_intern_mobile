@@ -1,8 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { StatusBar, Text, Alert, View, TouchableOpacity } from 'react-native';
+import { Alert, StatusBar, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import SignInputs from '../../components/Inputs/SignInputs';
 import SignButton from '../../components/SignButton/SignButton';
+import { doLoginRequest } from './bussiness';
+
 import {
   Container,
   ImageLogoSignIn,
@@ -14,10 +17,6 @@ import {
   TitleSignUpTouchable,
 } from './styles';
 
-// import { handleRequeriRegisterButton, handleSignIn } from './bussiness';
-import { doLogin } from '../../services/loginAPI';
-import { useNavigation } from '@react-navigation/native';
-
 const messageRegister = 'Não possui um acesso?';
 const messageRegisterButton = 'Cadastre-se aqui';
 
@@ -26,19 +25,38 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async () => {
-    const result = await doLogin({ email: email, password: password });
-    if (result === 'FORBIDDEN') {
-      Alert.alert('resultado', result);
-    } else {
-      Alert.alert('Entrou');
-    }
-    // const listErrors = validateLogin(email, password);
-    // console.log(listErrors);
-    // if (listErrors.length >= 0) {
-    //   console.log('e', 'erro');
-    // }
+  const onPressSignUpButton = () => {
+    navigation.navigate('SignUp');
   };
+
+  const onSuccess = () => {
+    Alert.alert('Entrou');
+    // setLoader(false);
+  };
+
+  const onError = () => {
+    Alert.alert('Dados Invalidos');
+    // setLoader(false);
+  };
+
+  const onLoginPressButton = () => {
+    // setLoader(true)
+    doLoginRequest({ email, password, onSuccess, onError });
+  };
+
+  // const handleLogin = async () => {
+  //   const result = await doLogin({ email: email, password: password });
+  //   if (result === 'FORBIDDEN') {
+  //     Alert.alert('resultado', result);
+  //   } else {
+  //     Alert.alert('Entrou');
+  //   }
+  //   // const listErrors = validateLogin(email, password);
+  //   // console.log(listErrors);
+  //   // if (listErrors.length >= 0) {
+  //   //   console.log('e', 'erro');
+  //   // }
+  // };
 
   const validateLogin = (email: string, password: string) => {
     const listErrors = [];
@@ -140,12 +158,12 @@ const SignIn = () => {
           secureTextEntry={true}
         />
       </InputAreaView>
-      <SignButton onPress={handleLogin} title="Entrar" />
+      <SignButton onPress={onLoginPressButton} title="Entrar" />
       <RegisterTextView>
         <MessageRegisterView>
           <Text>{messageRegister}</Text>
         </MessageRegisterView>
-        <SignUpTouchable onPress={() => navigation.navigate('SignUp')}>
+        <SignUpTouchable onPress={onPressSignUpButton}>
           <TitleSignUpTouchable>{messageRegisterButton}</TitleSignUpTouchable>
         </SignUpTouchable>
       </RegisterTextView>
