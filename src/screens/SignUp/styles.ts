@@ -44,14 +44,9 @@ export const TitleButtonRegister = styled.Text`
 
 export const RegisterTextAlert = styled.Text`
   width: 296px;
-  height: 45px;
+  height: 60px;
   left: 32px;
   top: 224px;
-
-  font-family: Red Hat Display;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
 
   text-align: center;
 

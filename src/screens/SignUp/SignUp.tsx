@@ -13,20 +13,21 @@ import {
   RegisterTextAlert,
   TitleButtonRegister,
 } from './styles';
+import { Messages } from './messages';
 
-const FinishRegisterText = (props: {
-  children:
-    | boolean
-    | React.ReactChild
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined;
-}) => (
-  <Text style={{ fontWeight: 'bold', color: Themes.colors.white }}>
-    {props.children}
-  </Text>
-);
+// const FinishRegisterText = (props: {
+//   children:
+//     | boolean
+//     | React.ReactChild
+//     | React.ReactFragment
+//     | React.ReactPortal
+//     | null
+//     | undefined;
+// }) => (
+//   <Text style={{ fontWeight: 'bold', color: Themes.colors.white }}>
+//     {props.children}
+//   </Text>
+// );
 
 const SignUp = () => {
   const navigation = useNavigation();
@@ -96,9 +97,11 @@ const SignUp = () => {
         <TitleButtonRegister>Finalizar Cadastro</TitleButtonRegister>
       </ButtonRegister>
       <RegisterTextAlert>
-        Ao clicar em{' '}
-        <FinishRegisterText>“Finalizar cadastro”</FinishRegisterText> você
-        estará aceitando também nossos termos e condições.
+        <Messages
+          initialText={'Ao clicar em'}
+          registerText={' "Finilizar Cadastro" '}
+          finishText={'você estará aceitando também nossos termos e condições.'}
+        />
       </RegisterTextAlert>
       <Loading visible={loading} />
     </Container>
