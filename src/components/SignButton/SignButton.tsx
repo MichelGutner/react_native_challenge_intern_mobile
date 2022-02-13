@@ -3,11 +3,10 @@ import styled from 'styled-components/native';
 import { Themes } from '../../../themes/themes';
 
 const Button = styled.TouchableOpacity`
-  position: absolute;
   width: 312px;
   height: 48px;
   left: 24px;
-  top: 459px;
+  top: 96px;
   border-radius: 4px;
   background-color: ${Themes.colors.white};
   align-items: center;
@@ -27,10 +26,10 @@ const TitleButton = styled.Text`
   color: ${Themes.colors.backgroundSanar};
 `;
 
-const SignButton = ({ Title, ...rest }) => {
+const SignButton = ({ title, ...rest }) => {
   return (
     <Button {...rest}>
-      <TitleButton>{Title}</TitleButton>
+      <TitleButton>{title}</TitleButton>
     </Button>
   );
 };

@@ -14,3 +14,6 @@ https://reactnavigation.org/docs/testing/
 # configurando telas principais
 
 utilização de styled components
+
+# inserindo logica de autenticação
+criação do usuario, e autenticação com login

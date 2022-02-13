@@ -15,6 +15,7 @@ const Input = styled.TextInput`
   display: flex;
   align-items: center;
   text-align: center;
+  color: white;
 `;
 
 const SignInputs = ({ ...rest }) => {

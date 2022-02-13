@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     'react-native/react-native': true,
+    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
@@ -11,6 +12,8 @@ module.exports = {
     'google',
     'plugin:react-native/all',
     'prettier',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -26,6 +29,7 @@ module.exports = {
     '@typescript-eslint',
     'prettier',
     'eslint-plugin-prettier',
+    'jest',
   ],
   rules: {
     'linebreak-style': 0,
@@ -56,5 +60,10 @@ module.exports = {
     'no-param-reassign': 'off',
     'prettier/prettier': 'error',
     'import/imports-first': 0,
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
   },
 };

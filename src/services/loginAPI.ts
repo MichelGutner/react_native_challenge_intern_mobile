@@ -20,7 +20,7 @@ const simulateRequest =
 
 export const doCreateUser = (user: any) =>
   new Promise(async resolve => {
-    var users: any[] = [];
+    let users: any[] = [];
     const savedUsers = await readUser();
 
     if (savedUsers) {
@@ -46,8 +46,8 @@ export const doLogin = (user: any) =>
 
     if (
       arraySavedUsers.some(
-        (existentUser: {password: any}) =>
-          user.password === existentUser.password,
+        (existentUser: { password: any }) =>
+          user.password === existentUser.password
       )
     ) {
       simulateRequest(SUCCESS_STATUS)(resolve);

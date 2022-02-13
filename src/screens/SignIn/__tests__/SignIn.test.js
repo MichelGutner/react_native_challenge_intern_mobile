@@ -1,13 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Onboarding from '../Onboarding';
+import SignIn from '../SignIn';
 
 test('renders correctly', () => {
   const tree = renderer
     .create(
       <NavigationContainer>
-        <Onboarding />
+        <SignIn />
       </NavigationContainer>
     )
     .toJSON();

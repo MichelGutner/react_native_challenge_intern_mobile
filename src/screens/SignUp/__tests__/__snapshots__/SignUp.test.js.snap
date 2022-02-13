@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#0050F0",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/components/SanarLogo/Logo-negativo.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "height": 45,
+          "left": 104,
+          "top": 96,
+          "width": 152,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "left": 24,
+          "top": 172,
+        },
+      ]
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Digite seu nome"
+      placeholderTextColor="rgba(255,255,255,0.5)"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#0050f0",
+            "borderColor": "#ffffff",
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "Roboto",
+            "fontSize": 16,
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "height": 48,
+            "marginTop": 16,
+            "textAlign": "center",
+            "width": 312,
+          },
+        ]
+      }
+      value=""
+    />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Digite seu e-mail"
+      placeholderTextColor="rgba(255,255,255,0.5)"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#0050f0",
+            "borderColor": "#ffffff",
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "Roboto",
+            "fontSize": 16,
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "height": 48,
+            "marginTop": 16,
+            "textAlign": "center",
+            "width": 312,
+          },
+        ]
+      }
+      value=""
+    />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Defina uma senha"
+      placeholderTextColor="rgba(255,255,255,0.5)"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#0050f0",
+            "borderColor": "#ffffff",
+            "borderRadius": 4,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "color": "white",
+            "display": "flex",
+            "fontFamily": "Roboto",
+            "fontSize": 16,
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+            "height": 48,
+            "marginTop": 16,
+            "textAlign": "center",
+            "width": 312,
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 4,
+        "height": 48,
+        "justifyContent": "center",
+        "left": 24,
+        "opacity": 1,
+        "top": 213,
+        "width": 312,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "color": "#0050F0",
+            "display": "flex",
+            "fontFamily": "Roboto",
+            "fontSize": 16,
+            "fontStyle": "normal",
+            "fontWeight": "500",
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Finalizar Cadastro
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "rgba(255,255,255,0.5)",
+          "fontFamily": "Red Hat Display",
+          "fontSize": 14,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+          "height": 45,
+          "left": 32,
+          "textAlign": "center",
+          "top": 224,
+          "width": 296,
+        },
+      ]
+    }
+  >
+    Ao clicar em
+     
+    <Text
+      style={
+        Object {
+          "color": "#FFF",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      “Finalizar cadastro”
+    </Text>
+     você estará aceitando também nossos termos e condições.
+  </Text>
+</RCTSafeAreaView>
+`;

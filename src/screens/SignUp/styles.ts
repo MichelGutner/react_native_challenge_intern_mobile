@@ -7,7 +7,6 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const ImageLogoSignUp = styled.Image`
-  position: absolute;
   width: 152px;
   height: 45px;
   left: 104px;
@@ -15,17 +14,15 @@ export const ImageLogoSignUp = styled.Image`
 `;
 
 export const InputAreaView = styled.View`
-  position: absolute;
   left: 24px;
-  top: 213px;
+  top: 172px;
 `;
 
 export const ButtonRegister = styled.TouchableOpacity`
-  position: absolute;
   width: 312px;
   height: 48px;
   left: 24px;
-  top: 421px;
+  top: 213px;
   border-radius: 4px;
   background-color: ${Themes.colors.white};
   align-items: center;
@@ -46,11 +43,10 @@ export const TitleButtonRegister = styled.Text`
 `;
 
 export const RegisterTextAlert = styled.Text`
-  position: absolute;
   width: 296px;
   height: 45px;
   left: 32px;
-  top: 485px;
+  top: 224px;
 
   font-family: Red Hat Display;
   font-style: normal;
