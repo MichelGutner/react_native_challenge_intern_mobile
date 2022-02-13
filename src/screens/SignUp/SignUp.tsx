@@ -1,9 +1,10 @@
 import { useNavigation } from '@react-navigation/native';
-import Loading from '../../components/loading/Loading';
+import { InputValidation } from '../../components/InputValidation/InputValidation';
 import React, { useState } from 'react';
 import { Alert, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
-import SignInputs from '../../components/Inputs/SignInputs';
+import Loading from '../../components/loading/Loading';
+import { handleRequeriRegisterButton } from './bussiness';
 import {
   ButtonRegister,
   Container,
@@ -12,7 +13,6 @@ import {
   RegisterTextAlert,
   TitleButtonRegister,
 } from './styles';
-import { handleRequeriRegisterButton } from './bussiness';
 
 const FinishRegisterText = (props: {
   children:
@@ -61,23 +61,35 @@ const SignUp = () => {
         source={require('../../components/SanarLogo/Logo-negativo.png')}
       />
       <InputAreaView>
-        <SignInputs
-          placeholderTextColor={Themes.colors.whiteOpacity}
-          placeholder="Digite seu nome"
+        <InputValidation
           value={username}
-          onChangeText={(text: string) => setUserName(text)}
+          onChangeText={(text: string) => {
+            setUserName(text);
+          }}
+          secureText={false}
+          isInputValid={false}
+          placeholder={'Digite seu nome'}
+          placeholderTextColor={Themes.colors.white}
         />
-        <SignInputs
-          placeholderTextColor={Themes.colors.whiteOpacity}
-          placeholder="Digite seu e-mail"
+        <InputValidation
           value={email}
-          onChangeText={(text: string) => setEmail(text)}
+          onChangeText={(text: string) => {
+            setEmail(text);
+          }}
+          secureText={false}
+          isInputValid={false}
+          placeholder={'Digite seu e-mail'}
+          placeholderTextColor={Themes.colors.white}
         />
-        <SignInputs
-          placeholderTextColor={Themes.colors.whiteOpacity}
-          placeholder="Defina uma senha"
+        <InputValidation
           value={password}
-          onChangeText={(text: string) => setPassword(text)}
+          onChangeText={(text: string) => {
+            setPassword(text);
+          }}
+          secureText={true}
+          isInputValid={false}
+          placeholder={'Digite sua senha'}
+          placeholderTextColor={Themes.colors.white}
         />
       </InputAreaView>
       <ButtonRegister onPress={onSignUpPressButton}>

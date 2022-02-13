@@ -69,7 +69,7 @@ const SignIn = () => {
       />
       <InputAreaView>
         <InputValidation
-          password={email}
+          value={email}
           placeholder="Digite seu e-mail"
           placeholderTextColor={Themes.colors.whiteOpacity}
           onChangeText={(text: string) => {
@@ -79,7 +79,7 @@ const SignIn = () => {
           isInputValid={validationEmail(email)}
         />
         <InputValidation
-          password={password}
+          value={password}
           placeholder="Digite sua senha"
           placeholderTextColor={Themes.colors.whiteOpacity}
           onChangeText={(text: string) => {

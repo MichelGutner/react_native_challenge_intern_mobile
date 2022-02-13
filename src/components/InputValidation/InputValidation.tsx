@@ -4,8 +4,8 @@ import SignInputs from '../../components/Inputs/SignInputs';
 import { Container } from './styles';
 
 type Props = {
-  password: string;
-  onChangeText: (password: string) => void;
+  value: string;
+  onChangeText: (value: string) => void;
   secureText: boolean;
   isInputValid: boolean;
   placeholder: string;
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const InputValidation = ({
-  password,
+  value,
   placeholder,
   placeholderTextColor,
   onChangeText,
@@ -25,7 +25,7 @@ export const InputValidation = ({
       <SignInputs
         placeholderTextColor={placeholderTextColor}
         placeholder={placeholder}
-        value={password}
+        value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureText}
       />
