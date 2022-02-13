@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
+import Loading from '../../components/loading/Loading';
 import React, { useState } from 'react';
 import { Alert, StatusBar, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
-import SignInputs from '../../components/Inputs/SignInputs';
 import { InputValidation } from '../../components/InputValidation/InputValidation';
 import SignButton from '../../components/SignButton/SignButton';
 import { validationEmail, validationPassword } from '../../utils/Validation';
@@ -25,30 +25,34 @@ const SignIn = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loader, setLoader] = useState(false);
 
   const onPressSignUpButton = () => {
     navigation.navigate('SignUp');
   };
 
   const onSuccess = () => {
+    setLoader(false);
     Alert.alert('Entrou');
-    // setLoader(false);
   };
 
   const onError = () => {
-    Alert.alert('Dados Invalidos');
+    setLoader(false);
+    Alert.alert(
+      'Dados Icorretos',
+      'Caso não tenho Cadastro Clique em Cadastrar',
+      [
+        { text: 'OK', onPress: () => navigation.navigate('SignIn') },
+        { text: 'Cadastre-se', onPress: onPressSignUpButton },
+      ]
+    );
   };
 
   const onLoginPressButton = () => {
-    // setLoader(true)
-    //    if(email && password)validateEmail({ email });
+    setLoader(true);
     if (!validationPassword(password)) {
-      console.log('Alerta password Incorreto');
-      return;
     }
     if (!validationEmail(email)) {
-      console.log('Alerta email Incorreto');
-      return;
     }
     doLoginRequest({ email, password, onSuccess, onError });
   };
@@ -94,6 +98,7 @@ const SignIn = () => {
           <TitleSignUpTouchable>{messageRegisterButton}</TitleSignUpTouchable>
         </SignUpTouchable>
       </RegisterTextView>
+      <Loading visible={loader} />
     </Container>
   );
 };

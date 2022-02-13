@@ -12,6 +12,11 @@ import {
 
 const Onboarding = () => {
   const navigation = useNavigation();
+
+  const onPressGoSignInButton = () => {
+    navigation.navigate('SignIn');
+  };
+
   return (
     <Container>
       <ImageLogoOnboarding
@@ -29,7 +34,7 @@ const Onboarding = () => {
         source={require('../../components/SanarLogo/illustration.png')}
         resizeMode="contain"
       />
-      <OnboardingButton onPress={() => navigation.navigate('SignIn')}>
+      <OnboardingButton onPress={onPressGoSignInButton}>
         <TitleButton>Começar Agora</TitleButton>
       </OnboardingButton>
     </Container>

@@ -55,21 +55,6 @@ const SignUp = () => {
       onError,
     });
   };
-
-  // const handleSubmit = async () => {
-  //   setLoading(true);
-  //   const result = await doCreateUser({
-  //     username: username,
-  //     email: email,
-  //     password: password,
-  //   });
-  //   if (result === 'OK') {
-  //   } else {
-  //     setLoading(false);
-  //   }
-  // };
-
-  // console.log(loading);
   return (
     <Container>
       <ImageLogoSignUp
@@ -103,7 +88,7 @@ const SignUp = () => {
         <FinishRegisterText>“Finalizar cadastro”</FinishRegisterText> você
         estará aceitando também nossos termos e condições.
       </RegisterTextAlert>
-      <Loading visible={loading} onClose={() => setLoading(false)} />
+      <Loading visible={loading} />
     </Container>
   );
 };

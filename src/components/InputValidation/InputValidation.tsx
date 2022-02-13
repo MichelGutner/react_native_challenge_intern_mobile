@@ -1,8 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import SignInputs from '../../components/Inputs/SignInputs';
-import { Container, ViewIcon } from './styles';
+import { Container } from './styles';
 
 type Props = {
   password: string;
