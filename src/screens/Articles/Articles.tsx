@@ -24,7 +24,6 @@ const Articles = () => {
     <ScrollView>
       <FlatList
         data={articles}
-        numColumns={2}
         keyExtractor={item => item.title}
         renderItem={renderItem}
       />

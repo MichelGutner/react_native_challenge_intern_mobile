@@ -1,24 +1,48 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
-import { View } from 'react-native';
-import { Container, Date, Language, Title } from './styles';
+import React, { useState } from 'react';
+import { StatusBar, Text } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import Loading from '../../components/loading/Loading';
+import {
+  BottomBody,
+  Container,
+  Date,
+  Language,
+  SepartorLine,
+  Title,
+} from './styles';
 
 const ArticlesItem = item => {
   const navigation = useNavigation();
   const { title, date, lang } = item.item;
+  const [loader, setLoader] = useState(false);
 
-  const data = date;
-
-  const formatDate = data.replace(/00:00:00/g, '').replace(/\+0000/g, '');
+  const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');
+  const openArticleItem = () => {
+    setLoader(true);
+    navigation.navigate('ArticleDetails', item);
+    return;
+  };
 
   return (
-    <View>
-      <Container onPress={() => navigation.navigate('ArticleDetails', item)}>
+    <RectButton activeOpacity={0.8} onPress={openArticleItem}>
+      <StatusBar barStyle={'light-content'} backgroundColor="transparent" />
+      <Container>
         <Title>{title}</Title>
-        <Date>{formatDate}</Date>
-        <Language>{lang}</Language>
+        <SepartorLine />
+        <BottomBody>
+          <Date>{formatDate}</Date>
+          <Language>
+            {lang === 'es' ? (
+              <Text style={{ color: 'yellow' }}>{lang}</Text>
+            ) : (
+              <Text style={{ color: 'red' }}>{lang}</Text>
+            )}
+          </Language>
+        </BottomBody>
       </Container>
-    </View>
+      <Loading visible={loader} />
+    </RectButton>
   );
 };
 
