@@ -33,6 +33,9 @@ const SignIn = () => {
 
   const onSuccess = () => {
     setLoader(false);
+    navigation.reset({
+      routes: [{ name: 'Arthicles' }],
+    });
     Alert.alert('Entrou');
   };
 

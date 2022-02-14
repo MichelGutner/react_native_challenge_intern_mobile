@@ -7,12 +7,14 @@ import Onboarding from '../screens/Onboarding/Onboarding';
 import SignIn from '../screens/SignIn/SignIn';
 import { Themes } from '../../themes/themes';
 import SignUp from '../screens/SignUp/SignUp';
+import Articles from '../screens/Articles/Articles';
 
 const Stack = createStackNavigator();
 
 function MainStack() {
   return (
     <Stack.Navigator
+      initialRouteName="Articles"
       screenOptions={{
         cardStyleInterpolator: CardStyleInterpolators.forNoAnimation,
       }}>
@@ -38,6 +40,15 @@ function MainStack() {
         }}
         name="SignUp"
         component={SignUp}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Artigos',
+          headerStyle: { backgroundColor: Themes.colors.backgroundSanar },
+          headerTintColor: Themes.colors.white,
+        }}
+        name="Articles"
+        component={Articles}
       />
     </Stack.Navigator>
   );

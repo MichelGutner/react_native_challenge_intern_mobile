@@ -49,6 +49,4 @@ export const RegisterTextAlert = styled.Text`
   top: 224px;
 
   text-align: center;
-
-  color: ${Themes.colors.whiteOpacity};
 `;

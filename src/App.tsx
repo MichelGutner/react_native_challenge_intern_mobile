@@ -1,5 +1,4 @@
 import { NavigationContainer } from '@react-navigation/native';
-import UserProvider from './components/context/UserProvider';
 import React from 'react';
 import { LogBox, StatusBar } from 'react-native';
 import MainStack from './routes/Routes';
@@ -11,14 +10,12 @@ LogBox.ignoreLogs([
 function App() {
   return (
     <NavigationContainer>
-      <UserProvider>
-        <StatusBar
-          barStyle={'dark-content'}
-          backgroundColor="transparent"
-          translucent
-        />
-        <MainStack />
-      </UserProvider>
+      <StatusBar
+        barStyle={'dark-content'}
+        backgroundColor="transparent"
+        translucent
+      />
+      <MainStack />
     </NavigationContainer>
   );
 }

@@ -1,16 +1,13 @@
-import { handleRequeriRegisterButton } from '../bussiness';
+import { doCreateRequest } from '../bussiness';
 import { doCreateUser } from '../../../services/loginAPI';
 
-// bussiness.doCreateUser = jest.fn();
-// jest.mock('../../../services/loginAPI');
-
 jest.mock('../../../services/loginAPI', () => ({
-  __esModule: true, // this property makes it work
+  __esModule: true,
   doCreateUser: jest.fn(),
 }));
 
 test('should call doCreateUser once', () => {
-  handleRequeriRegisterButton({
+  doCreateRequest({
     username: 'michel',
     email: 'michelgutner@gmail.com',
     password: '123456',

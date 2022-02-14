@@ -41,90 +41,195 @@ exports[`renders correctly 1`] = `
       ]
     }
   >
-    <TextInput
-      onChangeText={[Function]}
-      placeholder="Digite seu nome"
-      placeholderTextColor="rgba(255,255,255,0.5)"
+    <View
       style={
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "#0050f0",
-            "borderColor": "#ffffff",
-            "borderRadius": 4,
-            "borderStyle": "solid",
-            "borderWidth": 1,
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "Roboto",
-            "fontSize": 16,
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "height": 48,
-            "marginTop": 16,
-            "textAlign": "center",
-            "width": 312,
+            "flexDirection": "row",
           },
         ]
       }
-      value=""
-    />
-    <TextInput
-      onChangeText={[Function]}
-      placeholder="Digite seu e-mail"
-      placeholderTextColor="rgba(255,255,255,0.5)"
+    >
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Digite seu nome"
+        placeholderTextColor="#FFF"
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#0050f0",
+              "borderColor": "#ffffff",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "color": "white",
+              "display": "flex",
+              "fontFamily": "Roboto",
+              "fontSize": 16,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "height": 48,
+              "marginTop": 16,
+              "textAlign": "center",
+              "width": 312,
+            },
+          ]
+        }
+        value=""
+      />
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": "red",
+              "fontSize": 20,
+            },
+            Object {
+              "marginTop": 20,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
       style={
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "#0050f0",
-            "borderColor": "#ffffff",
-            "borderRadius": 4,
-            "borderStyle": "solid",
-            "borderWidth": 1,
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "Roboto",
-            "fontSize": 16,
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "height": 48,
-            "marginTop": 16,
-            "textAlign": "center",
-            "width": 312,
+            "flexDirection": "row",
           },
         ]
       }
-      value=""
-    />
-    <TextInput
-      onChangeText={[Function]}
-      placeholder="Defina uma senha"
-      placeholderTextColor="rgba(255,255,255,0.5)"
+    >
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Digite seu e-mail"
+        placeholderTextColor="#FFF"
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#0050f0",
+              "borderColor": "#ffffff",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "color": "white",
+              "display": "flex",
+              "fontFamily": "Roboto",
+              "fontSize": 16,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "height": 48,
+              "marginTop": 16,
+              "textAlign": "center",
+              "width": 312,
+            },
+          ]
+        }
+        value=""
+      />
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": "red",
+              "fontSize": 20,
+            },
+            Object {
+              "marginTop": 20,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
       style={
         Array [
           Object {
             "alignItems": "center",
-            "backgroundColor": "#0050f0",
-            "borderColor": "#ffffff",
-            "borderRadius": 4,
-            "borderStyle": "solid",
-            "borderWidth": 1,
-            "color": "white",
-            "display": "flex",
-            "fontFamily": "Roboto",
-            "fontSize": 16,
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "height": 48,
-            "marginTop": 16,
-            "textAlign": "center",
-            "width": 312,
+            "flexDirection": "row",
           },
         ]
       }
-      value=""
-    />
+    >
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Digite sua senha"
+        placeholderTextColor="#FFF"
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#0050f0",
+              "borderColor": "#ffffff",
+              "borderRadius": 4,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "color": "white",
+              "display": "flex",
+              "fontFamily": "Roboto",
+              "fontSize": 16,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+              "height": 48,
+              "marginTop": 16,
+              "textAlign": "center",
+              "width": 312,
+            },
+          ]
+        }
+        value=""
+      />
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": "red",
+              "fontSize": 20,
+            },
+            Object {
+              "marginTop": 20,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
   </View>
   <View
     accessible={true}
@@ -174,12 +279,7 @@ exports[`renders correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "rgba(255,255,255,0.5)",
-          "fontFamily": "Red Hat Display",
-          "fontSize": 14,
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "height": 45,
+          "height": 60,
           "left": 32,
           "textAlign": "center",
           "top": 224,
@@ -188,8 +288,17 @@ exports[`renders correctly 1`] = `
       ]
     }
   >
-    Ao clicar em
-     
+    <Text
+      style={
+        Object {
+          "color": "rgba(255,255,255,0.5)",
+          "fontSize": 13,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Ao clicar em
+    </Text>
     <Text
       style={
         Object {
@@ -198,9 +307,19 @@ exports[`renders correctly 1`] = `
         }
       }
     >
-      “Finalizar cadastro”
+       "Finilizar Cadastro" 
     </Text>
-     você estará aceitando também nossos termos e condições.
+    <Text
+      style={
+        Object {
+          "color": "rgba(255,255,255,0.5)",
+          "fontSize": 13,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      você estará aceitando também nossos termos e condições.
+    </Text>
   </Text>
   <Modal
     hardwareAccelerated={false}
