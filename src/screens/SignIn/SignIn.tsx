@@ -50,9 +50,20 @@ const SignIn = () => {
 
   const onLoginPressButton = () => {
     setLoader(true);
+    if (!validationPassword(password) && !validationEmail(email)) {
+      Alert.alert('Desculpe!\nSeus dados não conferem');
+      setLoader(false);
+      return;
+    }
     if (!validationPassword(password)) {
+      Alert.alert('Desculpe!\nSua senha pode estar errada!');
+      setLoader(false);
+      return;
     }
     if (!validationEmail(email)) {
+      Alert.alert('Desculpe!\nSeu e-mail pode estar errado!');
+      setLoader(false);
+      return;
     }
     doLoginRequest({ email, password, onSuccess, onError });
   };

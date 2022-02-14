@@ -1,10 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
-import { InputValidation } from '../../components/InputValidation/InputValidation';
 import React, { useState } from 'react';
-import { Alert, Text } from 'react-native';
+import { Alert } from 'react-native';
 import { Themes } from '../../../themes/themes';
+import { InputValidation } from '../../components/InputValidation/InputValidation';
 import Loading from '../../components/loading/Loading';
-import { handleRequeriRegisterButton } from './bussiness';
+import { doCreateRequest } from './bussiness';
+import { Messages } from './messages';
 import {
   ButtonRegister,
   Container,
@@ -13,21 +14,7 @@ import {
   RegisterTextAlert,
   TitleButtonRegister,
 } from './styles';
-import { Messages } from './messages';
-
-// const FinishRegisterText = (props: {
-//   children:
-//     | boolean
-//     | React.ReactChild
-//     | React.ReactFragment
-//     | React.ReactPortal
-//     | null
-//     | undefined;
-// }) => (
-//   <Text style={{ fontWeight: 'bold', color: Themes.colors.white }}>
-//     {props.children}
-//   </Text>
-// );
+import { validationEmail, validationPassword } from '../../utils/Validation';
 
 const SignUp = () => {
   const navigation = useNavigation();
@@ -36,11 +23,16 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const onPressRegisterButtonGoBack = () => {
+    navigation.navigate('SignIn');
+  };
   const onSuccess = () => {
     setLoading(false);
-    Alert.alert('Sucesso', 'Clique em OK para ir para tela de login', [
-      { text: 'OK', onPress: () => navigation.navigate('SignIn') },
-    ]);
+    Alert.alert(
+      'Sucesso',
+      'Clique em OK para ser redirecionado para tela de login',
+      [{ text: 'OK', onPress: onPressRegisterButtonGoBack }]
+    );
   };
   const onError = () => {
     setLoading(false);
@@ -48,14 +40,29 @@ const SignUp = () => {
 
   const onSignUpPressButton = () => {
     setLoading(true);
-    handleRequeriRegisterButton({
-      username,
-      email,
-      password,
-      onSuccess,
-      onError,
-    });
+    {
+      if (!validationEmail(email)) {
+        Alert.alert('Insira um email válido');
+        setLoading(false);
+        return;
+      }
+      if (!validationPassword(password)) {
+        Alert.alert('Insira uma senha válida');
+        setLoading(false);
+        return;
+      }
+      doCreateRequest({
+        username,
+        email,
+        password,
+        onSuccess,
+        onError,
+      });
+    }
   };
+
+  const finishRegister = 'Finalizar Cadastro';
+
   return (
     <Container>
       <ImageLogoSignUp
@@ -78,7 +85,7 @@ const SignUp = () => {
             setEmail(text);
           }}
           secureText={false}
-          isInputValid={false}
+          isInputValid={validationEmail(email)}
           placeholder={'Digite seu e-mail'}
           placeholderTextColor={Themes.colors.white}
         />
@@ -88,13 +95,13 @@ const SignUp = () => {
             setPassword(text);
           }}
           secureText={true}
-          isInputValid={false}
+          isInputValid={validationPassword(password)}
           placeholder={'Digite sua senha'}
           placeholderTextColor={Themes.colors.white}
         />
       </InputAreaView>
       <ButtonRegister onPress={onSignUpPressButton}>
-        <TitleButtonRegister>Finalizar Cadastro</TitleButtonRegister>
+        <TitleButtonRegister>{finishRegister}</TitleButtonRegister>
       </ButtonRegister>
       <RegisterTextAlert>
         <Messages

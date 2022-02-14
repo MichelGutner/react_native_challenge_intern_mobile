@@ -1,4 +1,4 @@
-import { doCreateUser } from '../../services/loginAPI';
+import { doCreateUser } from './../../services/loginAPI';
 
 type Props = {
   username: string;
@@ -8,7 +8,7 @@ type Props = {
   onError: () => void;
 };
 
-export const handleRequeriRegisterButton = async ({
+export const doCreateRequest = async ({
   username,
   email,
   password,

@@ -21,12 +21,8 @@ export const doLoginRequest = async ({
   });
   if (result === 'FORBIDDEN') {
     onError();
+    console.log(result);
   } else {
     onSuccess();
   }
-  // const listErrors = validateLogin(email, password);
-  // console.log(listErrors);
-  // if (listErrors.length >= 0) {
-  //   console.log('e', 'erro');
-  // }
 };

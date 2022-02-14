@@ -10,10 +10,19 @@ https://stackoverflow.com/questions/66652403/jest-config-is-throwing-type-errorh
 
 https://reactnavigation.org/docs/testing/
 
+https://regex101.com/
+
+https://stackoverflow.com/a/18812336/6273003
 
 # configurando telas principais
 
 utilização de styled components
+
+camadas bussiness
+
+criação utils
+
+
 
 # inserindo logica de autenticação
 criação do usuario, e autenticação com login
