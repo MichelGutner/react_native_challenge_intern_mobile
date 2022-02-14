@@ -8,6 +8,7 @@ import SignIn from '../screens/SignIn/SignIn';
 import { Themes } from '../../themes/themes';
 import SignUp from '../screens/SignUp/SignUp';
 import Articles from '../screens/Articles/Articles';
+import ArticleDetails from '../screens/ArticleDetails/ArticleDetails';
 
 const Stack = createStackNavigator();
 
@@ -49,6 +50,15 @@ function MainStack() {
         }}
         name="Articles"
         component={Articles}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Detalhes do Artigo',
+          headerStyle: { backgroundColor: Themes.colors.backgroundSanar },
+          headerTintColor: Themes.colors.white,
+        }}
+        name="ArticleDetails"
+        component={ArticleDetails}
       />
     </Stack.Navigator>
   );
