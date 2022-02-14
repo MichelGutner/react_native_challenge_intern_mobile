@@ -1,14 +1,14 @@
-import React from 'react';
 import {
   CardStyleInterpolators,
   createStackNavigator,
 } from '@react-navigation/stack';
+import React from 'react';
+import { Themes } from '../../themes/themes';
+import ArticleDetails from '../screens/ArticleDetails/ArticleDetails';
+import Articles from '../screens/Articles/Articles';
 import Onboarding from '../screens/Onboarding/Onboarding';
 import SignIn from '../screens/SignIn/SignIn';
-import { Themes } from '../../themes/themes';
 import SignUp from '../screens/SignUp/SignUp';
-import Articles from '../screens/Articles/Articles';
-import ArticleDetails from '../screens/ArticleDetails/ArticleDetails';
 
 const Stack = createStackNavigator();
 

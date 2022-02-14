@@ -10,6 +10,12 @@ import {
   TitleButton,
 } from './styles';
 
+const titleMessage =
+  'Temos uma solução para cada etapa da sua carreira na medicina';
+const subTitleMessage =
+  'Existimos para te ajudar em cada passo dessa incrível missão de cuidar de vidas.';
+const titleButton = 'Começar Agora';
+
 const Onboarding = () => {
   const navigation = useNavigation();
 
@@ -23,19 +29,14 @@ const Onboarding = () => {
         source={require('../../components/SanarLogo/logo-sanar.png')}
         resizeMode="contain"
       />
-      <TextTitle>
-        Temos uma solução para cada etapa da sua carreira na medicina
-      </TextTitle>
-      <TextSubTitle>
-        Existimos para te ajudar em cada passo dessa incrível missão de cuidar
-        de vidas.
-      </TextSubTitle>
+      <TextTitle>{titleMessage}</TextTitle>
+      <TextSubTitle>{subTitleMessage}</TextSubTitle>
       <IllustrationImage
         source={require('../../components/SanarLogo/illustration.png')}
         resizeMode="contain"
       />
       <OnboardingButton onPress={onPressGoSignInButton}>
-        <TitleButton>Começar Agora</TitleButton>
+        <TitleButton>{titleButton}</TitleButton>
       </OnboardingButton>
     </Container>
   );

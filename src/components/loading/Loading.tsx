@@ -1,7 +1,7 @@
-import { ActivityIndicator, ModalProps, StatusBar } from 'react-native';
 import React from 'react';
+import { ActivityIndicator, ModalProps, StatusBar } from 'react-native';
 import { Themes } from '../../../themes/themes';
-import { Modal, ImageLogoSignIn, ViewContainer } from './styles';
+import { ImageLogoSignIn, Modal, ViewContainer } from './styles';
 
 interface Modal extends ModalProps {
   visible: boolean;

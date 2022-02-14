@@ -3,7 +3,11 @@ import { FlatList, ScrollView } from 'react-native';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
 import { getArticles } from '../../services/healthCareApi';
 
-const renderItem = ({ item }) => <ArticlesItem item={item} />;
+type Props = {
+  item: any;
+};
+
+const renderItem = ({ item }: Props) => <ArticlesItem item={item} />;
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
