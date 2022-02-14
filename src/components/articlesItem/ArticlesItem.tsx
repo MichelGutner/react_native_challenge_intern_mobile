@@ -9,7 +9,7 @@ import {
   Date,
   Language,
   SepartorLine,
-  Title
+  Title,
 } from './styles';
 
 const ArticlesItem = (item: any) => {
