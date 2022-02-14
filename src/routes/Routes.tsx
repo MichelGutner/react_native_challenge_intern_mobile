@@ -3,6 +3,7 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import React from 'react';
+import Icon from 'react-native-vector-icons/AntDesign';
 import { Themes } from '../../themes/themes';
 import ArticleDetails from '../screens/ArticleDetails/ArticleDetails';
 import Articles from '../screens/Articles/Articles';
@@ -47,6 +48,15 @@ function MainStack() {
           title: 'Artigos',
           headerStyle: { backgroundColor: Themes.colors.backgroundSanar },
           headerTintColor: Themes.colors.white,
+          headerRight: () => (
+            <Icon
+              style={{ marginRight: 10 }}
+              onPress={() => alert('This is a button!')}
+              name="search1"
+              size={25}
+              color="white"
+            />
+          ),
         }}
         name="Articles"
         component={Articles}
