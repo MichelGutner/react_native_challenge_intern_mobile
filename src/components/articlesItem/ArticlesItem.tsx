@@ -5,7 +5,7 @@ import { Container, Date, Language, Title } from './styles';
 
 const ArticlesItem = item => {
   const navigation = useNavigation();
-  const { title, date, lang } = item;
+  const { title, date, lang } = item.item;
 
   return (
     <View>
