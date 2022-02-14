@@ -15,6 +15,7 @@ const Stack = createStackNavigator();
 function MainStack() {
   return (
     <Stack.Navigator
+      initialRouteName="Articles"
       screenOptions={{
         cardStyleInterpolator: CardStyleInterpolators.forNoAnimation,
       }}>

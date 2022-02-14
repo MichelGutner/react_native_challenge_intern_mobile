@@ -7,17 +7,18 @@ import {
   BottomBody,
   Container,
   Date,
+  HeaderBody,
   Language,
-  SepartorLine,
   Title,
 } from './styles';
 
-const ArticlesItem = (item: any) => {
+const ArticlesItem = item => {
   const navigation = useNavigation();
   const { title, date, lang } = item.item;
   const [loader, setLoader] = useState(false);
 
   const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');
+
   const openArticleItem = () => {
     setLoader(true);
     navigation.navigate('ArticleDetails', item);
@@ -28,13 +29,14 @@ const ArticlesItem = (item: any) => {
     <RectButton activeOpacity={0.8} onPress={openArticleItem}>
       <StatusBar barStyle={'light-content'} backgroundColor="transparent" />
       <Container>
-        <Title>{title}</Title>
-        <SepartorLine />
+        <HeaderBody>
+          <Title>{title}</Title>
+        </HeaderBody>
         <BottomBody>
           <Date>{formatDate}</Date>
           <Language>
             {lang === 'es' ? (
-              <Text style={{ color: 'yellow' }}>{lang}</Text>
+              <Text style={{ color: 'green' }}>{lang}</Text>
             ) : (
               <Text style={{ color: 'red' }}>{lang}</Text>
             )}

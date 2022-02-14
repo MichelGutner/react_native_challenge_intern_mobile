@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <TextInput
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#0050f0",
+          "borderColor": "#ffffff",
+          "borderRadius": 4,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "color": "white",
+          "display": "flex",
+          "fontFamily": "Roboto",
+          "fontSize": 16,
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+          "height": 48,
+          "marginTop": 16,
+          "textAlign": "center",
+          "width": 312,
+        },
+      ]
+    }
+  />
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      Array [
+        Object {
+          "color": "red",
+          "fontSize": 20,
+        },
+        Object {
+          "marginTop": 20,
+        },
+        Object {
+          "fontFamily": "anticon",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+</View>
+`;
