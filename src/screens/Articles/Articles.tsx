@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, FlatList } from 'react-native';
+import { ActivityIndicator, Alert, FlatList } from 'react-native';
 import { Header } from 'react-native-elements';
 import { Themes } from '../../../themes/themes';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
 import SearchArticles from '../../components/searchArticles/SearchArticles';
 import { getArticles } from '../../services/healthCareApi';
-import { ArticlesLenght, Container } from './styles';
+import { Activity, ArticlesLenght, Container } from './styles';
 
 const renderItem = ({ item }) => <ArticlesItem item={item} />;
 
@@ -64,6 +64,7 @@ const Articles = () => {
     <Container>
       <Header
         statusBarProps={{
+          barStyle: 'light-content',
           backgroundColor: Themes.colors.backgroundSanar,
           translucent: true,
         }}
@@ -87,11 +88,15 @@ const Articles = () => {
           color: '#fff',
         }}
       />
-      <FlatList
-        data={articlesOrder}
-        keyExtractor={item => item.title.toString()}
-        renderItem={renderItem}
-      />
+      {articlesOrder.length !== 0 ? (
+        <FlatList
+          data={articlesOrder}
+          keyExtractor={item => item.title.toString()}
+          renderItem={renderItem}
+        />
+      ) : (
+        <Activity size="large" animating color={'blue'} />
+      )}
     </Container>
   );
 };
