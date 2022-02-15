@@ -21,7 +21,6 @@ export const doLoginRequest = async ({
   });
   if (result === 'FORBIDDEN') {
     onError();
-    console.log(result);
   } else {
     onSuccess();
   }

@@ -14,12 +14,10 @@ import {
 
 const ArticlesItem = item => {
   const navigation = useNavigation();
-  console.log(item);
-  console.log(item.item);
   const { title, date, lang } = item.item;
   const [loader, setLoader] = useState(false);
 
-  // const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');
+  const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');
 
   const openArticleItem = () => {
     setLoader(true);
@@ -35,7 +33,7 @@ const ArticlesItem = item => {
           <Title>{title}</Title>
         </HeaderBody>
         <BottomBody>
-          <Date>{date}</Date>
+          <Date>{formatDate}</Date>
           <Language>
             {lang === 'es' ? (
               <Text style={{ color: 'green' }}>{lang} 🇪🇸</Text>

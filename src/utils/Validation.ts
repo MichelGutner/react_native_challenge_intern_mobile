@@ -31,7 +31,6 @@ export const validationPassword = (password: string) => {
   const isPasswordLengthValid = validationPasswordLength(password);
   const hasPasswordUpperLowerOneLetterSpecial =
     validationPasswordHasUpperLowerOneLetterSpecial(password);
-  console.log(isPasswordLengthValid && hasPasswordUpperLowerOneLetterSpecial);
   return isPasswordLengthValid && hasPasswordUpperLowerOneLetterSpecial;
 };
 
