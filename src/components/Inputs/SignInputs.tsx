@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 const Input = styled.TextInput`
-  margin-top: 16px;
-  width: 312px;
+  width: 290px;
   height: 48px;
-  background-color: #0050f0;
-  border: 1px solid #ffffff;
   border-radius: 4px;
   font-family: Roboto;
   font-style: normal;

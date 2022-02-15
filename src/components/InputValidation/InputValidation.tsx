@@ -30,14 +30,9 @@ export const InputValidation = ({
         secureTextEntry={secureText}
       />
       {isInputValid ? (
-        <Icon
-          style={{ marginTop: 20 }}
-          name={'check'}
-          size={20}
-          color="green"
-        />
+        <Icon name={'check'} size={20} color="green" />
       ) : (
-        <Icon style={{ marginTop: 20 }} name={'close'} size={20} color="red" />
+        <Icon name={'close'} size={20} color="red" />
       )}
     </Container>
   );
