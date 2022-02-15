@@ -11,6 +11,9 @@ const renderItem = ({ item }: any) => <ArticlesItem item={item} />;
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [searchArticles, setSearchArticles] = useState('');
+
+  const newArticles = articles;
 
   useEffect(() => {
     getArticles(
@@ -22,6 +25,31 @@ const Articles = () => {
       }
     );
   }, []);
+
+  useEffect(() => {
+    if (searchArticles === '') {
+      getArticles(
+        json => {
+          setArticles(json.articles);
+        },
+        () => {
+          Alert.alert('Algum erro aconteceu');
+        }
+      );
+    } else {
+      setArticles(
+        articles.filter(item => {
+          if (
+            item.title.toLowerCase().indexOf(searchArticles.toLowerCase()) > -1
+          ) {
+            return true;
+          } else {
+            return false;
+          }
+        })
+      );
+    }
+  }, [searchArticles]);
 
   const articlesLength = articles.length;
 
@@ -37,14 +65,19 @@ const Articles = () => {
             {articlesLength + ' Artigos encontrado'}
           </ArticlesLenght>
         }
-        centerComponent={<SearchArticles />}
+        centerComponent={
+          <SearchArticles
+            value={searchArticles}
+            onChangeText={text => setSearchArticles(text)}
+          />
+        }
         rightComponent={{
           icon: 'search',
           color: '#fff',
         }}
       />
       <FlatList
-        data={articles}
+        data={newArticles}
         keyExtractor={item => item.title.toString()}
         renderItem={renderItem}
       />

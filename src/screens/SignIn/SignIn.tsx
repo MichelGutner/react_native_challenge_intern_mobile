@@ -36,7 +36,6 @@ const SignIn = () => {
     navigation.reset({
       routes: [{ name: 'Articles' }],
     });
-    Alert.alert('Entrou');
   };
 
   const onError = () => {
