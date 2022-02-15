@@ -1,6 +1,6 @@
 import SearchArticles from '../../components/searchArticles/SearchArticles';
 import React, { useEffect, useState } from 'react';
-import { FlatList, ScrollView } from 'react-native';
+import { FlatList, ScrollView, Alert } from 'react-native';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
 import { getArticles } from '../../services/healthCareApi';
 
@@ -15,8 +15,8 @@ const Articles = () => {
       json => {
         setArticles(json.articles);
       },
-      error => {
-        console.log(error);
+      () => {
+        Alert.alert('Algum erro aconteceu');
       }
     );
   }, []);
