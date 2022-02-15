@@ -1,18 +1,20 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { StatusBar, Text } from 'react-native';
+import { StatusBar } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import Loading from '../../components/loading/Loading';
 import {
   BottomBody,
   Container,
   Date,
+  EnLanguage,
+  EsLanguage,
   HeaderBody,
   Language,
   Title,
 } from './styles';
 
-const ArticlesItem = (item: any) => {
+const ArticlesItem = item => {
   const navigation = useNavigation();
   const { title, date, lang } = item.item;
   const [loader, setLoader] = useState(false);
@@ -22,6 +24,7 @@ const ArticlesItem = (item: any) => {
   const openArticleItem = () => {
     setLoader(true);
     navigation.navigate('ArticleDetails', item);
+    setLoader(false);
     return;
   };
 
@@ -36,9 +39,9 @@ const ArticlesItem = (item: any) => {
           <Date>{formatDate}</Date>
           <Language>
             {lang === 'es' ? (
-              <Text style={{ color: 'green' }}>{lang} 🇪🇸</Text>
+              <EsLanguage>{lang} 🇪🇸</EsLanguage>
             ) : (
-              <Text style={{ color: 'red' }}>{lang} 🇺🇸</Text>
+              <EnLanguage>{lang} 🇺🇸</EnLanguage>
             )}
           </Language>
         </BottomBody>

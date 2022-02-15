@@ -46,3 +46,10 @@ export const HeaderBody = styled.View`
   justify-content: center;
   border-radius: 10px;
 `;
+
+export const EsLanguage = styled.Text`
+  color: green;
+`;
+export const EnLanguage = styled.Text`
+  color: red;
+`;

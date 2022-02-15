@@ -28,11 +28,12 @@ const TitleButton = styled.Text`
 
 type TextProps = {
   title: string;
+  onPress: any;
 };
 
-const SignButton = ({ title, ...rest }: TextProps) => {
+const SignButton = ({ title, onPress, ...rest }: TextProps) => {
   return (
-    <Button {...rest}>
+    <Button {...rest} onPress={onPress}>
       <TitleButton>{title}</TitleButton>
     </Button>
   );

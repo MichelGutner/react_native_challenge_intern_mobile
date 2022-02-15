@@ -5,14 +5,13 @@ export const Container = styled.View`
   width: 140px;
   height: 25px;
   justify-content: center;
+  background-color: ${Themes.colors.almostTransparent};
+  border-radius: 20px;
 `;
 
 export const TextInput = styled.TextInput`
-  border-radius: 20px;
   color: ${Themes.colors.white};
   padding-left: 20px;
   padding-bottom: 2px;
   font-size: 13px;
-  border-bottom-width: 0.25px;
-  border-color: ${Themes.colors.white};
 `;

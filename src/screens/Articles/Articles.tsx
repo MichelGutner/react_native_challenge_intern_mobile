@@ -7,13 +7,11 @@ import SearchArticles from '../../components/searchArticles/SearchArticles';
 import { getArticles } from '../../services/healthCareApi';
 import { ArticlesLenght, Container } from './styles';
 
-const renderItem = ({ item }: any) => <ArticlesItem item={item} />;
+const renderItem = ({ item }) => <ArticlesItem item={item} />;
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [searchArticles, setSearchArticles] = useState('');
-
-  const newArticles = articles;
 
   useEffect(() => {
     getArticles(
@@ -25,6 +23,15 @@ const Articles = () => {
       }
     );
   }, []);
+
+  const articlesOrder = [...articles];
+  articlesOrder.sort((ordenationPrev, OrdernationNext) =>
+    ordenationPrev.date < OrdernationNext.date
+      ? 1
+      : OrdernationNext.date < ordenationPrev.date
+      ? -1
+      : 0
+  );
 
   useEffect(() => {
     if (searchArticles === '') {
@@ -38,7 +45,7 @@ const Articles = () => {
       );
     } else {
       setArticles(
-        articles.filter(item => {
+        articlesOrder.filter(item => {
           if (
             item.title.toLowerCase().indexOf(searchArticles.toLowerCase()) > -1
           ) {
@@ -68,7 +75,7 @@ const Articles = () => {
         centerComponent={
           <SearchArticles
             value={searchArticles}
-            onChangeText={text => setSearchArticles(text)}
+            onChangeText={(text: string) => setSearchArticles(text)}
           />
         }
         rightComponent={{
@@ -77,7 +84,7 @@ const Articles = () => {
         }}
       />
       <FlatList
-        data={newArticles}
+        data={articlesOrder}
         keyExtractor={item => item.title.toString()}
         renderItem={renderItem}
       />
