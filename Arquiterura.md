@@ -1,10 +1,11 @@
 ## Estruturas de pastas
 cada componente terá 1 arquivo de estilos, logica, arquivo principal.
-arquivos que necessitam de testes, tera o arquivo test
+arquivos que necessitam de testes, tera o arquivo test.
 
 ## configuração ambiente testes
-
 para configurar o ambiente de teste
+foi utilizados algumas referências abaixo:
+
 https://www.reactnativeschool.com/setup-jest-tests-with-react-navigation
 
 https://stackoverflow.com/questions/66652403/jest-config-is-throwing-type-errorhandler-error-mixed-isfatal-boolean

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgba(255,255,255,0.5)",
+        "paddingBottom": 20,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <View>
+    <Text
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "color": "#0050F0",
+            "fontSize": 26,
+            "fontWeight": "bold",
+            "marginBottom": 10,
+            "marginTop": 10,
+          },
+        ]
+      }
+    >
+      TITLE
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "marginBottom": 2,
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 2,
+          },
+        ]
+      }
+    >
+      <View>
+        <Text
+          style={
+            Array [
+              null,
+              null,
+            ]
+          }
+        >
+          undefined
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -38,9 +38,11 @@ export const BottomBody = styled.View`
 `;
 
 export const HeaderBody = styled.View`
-  height: 90px;
+  height: 80px;
+  margin-top: 8px;
   margin-bottom: 20px;
   background-color: ${Themes.colors.backgroundSanar};
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 `;

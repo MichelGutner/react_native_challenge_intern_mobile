@@ -23,6 +23,11 @@ exports[`renders correctly 1`] = `
     >
       <View />
     </RCTScrollView>
+    <Modal
+      animationType="slide"
+      hardwareAccelerated={false}
+      visible={false}
+    />
   </View>
 </RCTScrollView>
 `;
