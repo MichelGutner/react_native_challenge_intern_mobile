@@ -10,7 +10,7 @@ arquivos que necessitam de testes, tera o arquivo test.
 
 o codigo foi divido em blocos components, rotas, telas, serviços, utils.
 
-### configurando telas principais
+## configurando telas principais
 
 utlização react native elements
 para configuração da tela de artigos com header estilizado.
@@ -28,7 +28,7 @@ as demais foram desenvolvida visando uma mairo facilidade de entendimento do usu
 
 4° criação utils - armazenar todas nossas funções de validações em um arquivo separado.
 
-### configuração ambiente testes
+## configuração ambiente testes
 para configurar o ambiente de teste
 foi utilizados algumas referências:
 
@@ -41,7 +41,7 @@ https://stackoverflow.com/questions/66652403/
 3°utilização da documentação para resolver problema de mocks na biblioteca de navegação
 https://reactnavigation.org/docs/testing/
 
-### inserindo autenticadores
+## inserindo autenticadores
 1° verificação com authenticadores para uma melhor performace
 para que o usuário(a) consiga acessar os conteudos de artigos ele precisa se cadastrar e autenticar seu login com os dados validos, pois os autenticadores bloquearam seu acesso caso o seu login não seja valido.
 
@@ -56,7 +56,7 @@ https://regex101.com/
 3° pesquisa para resolução de problemas com regex.
 https://stackoverflow.com/a/18812336/6273003
 
-### inserindo logica de autenticação
+## inserindo logica de autenticação
 criação do usuario, e autenticação com login.
 
 1° consumo da API de login
@@ -72,7 +72,7 @@ fornecer valor adicional e tornar os testes mais fáceis.
 criação testes componentes dologin e docreateUser
 verificar se as funções estão sendo chamadas apos chamar a função de validação dos campos de email, e senha.
 
-#### Icon and Splash
+## Icon and Splash
 inserção icon and splash_screen
 
 ## bugs
