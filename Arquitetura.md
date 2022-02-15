@@ -1,8 +1,8 @@
 # Sanar Intern Challenge Mobile
 
 <div flex-direction: row; align="center">
-  <img src="tela1.gif" alt="Coverage test" height="599" width="499"/>
-  <img src="tela2.gif" alt="Coverage test" height="599" width="499"/>
+  <img src="tela1.gif" height="599" width="499"/>
+  <img src="tela2.gif" height="599" width="499"/>
 </div>
 
 <div align="center">
