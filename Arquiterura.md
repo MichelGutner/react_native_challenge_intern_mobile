@@ -16,7 +16,7 @@ https://regex101.com/
 
 https://stackoverflow.com/a/18812336/6273003
 
-# configurando telas principais
+## configurando telas principais
 
 utlização react native elements
 
@@ -39,7 +39,7 @@ consumo da API de login
 criação snapshots
 criação testes componentes dologin e docreateUser
 
-### Icon and Splash
+# Icon and Splash
 inserção icon and splash_screen
 
 

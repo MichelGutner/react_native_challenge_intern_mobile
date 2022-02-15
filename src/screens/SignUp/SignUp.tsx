@@ -4,8 +4,8 @@ import { Alert } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import { InputValidation } from '../../components/InputValidation/InputValidation';
 import Loading from '../../components/loading/Loading';
-import { doCreateRequest } from './bussiness';
-import { Messages } from './messages';
+import { doCreateRequest, onPressRegisterButtonGoBack } from './bussiness';
+import { finishRegister, Messages } from './messages';
 import {
   ButtonRegister,
   Container,
@@ -26,6 +26,7 @@ const SignUp = () => {
   const onPressRegisterButtonGoBack = () => {
     navigation.navigate('SignIn');
   };
+
   const onSuccess = () => {
     setLoading(false);
     Alert.alert(
@@ -60,8 +61,6 @@ const SignUp = () => {
       });
     }
   };
-
-  const finishRegister = 'Finalizar Cadastro';
 
   return (
     <Container>

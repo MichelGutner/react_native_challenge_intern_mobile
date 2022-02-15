@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
+import { subTitleMessage, titleButton, titleMessage } from './bussiness';
 import {
   Container,
   IllustrationImage,
@@ -9,12 +10,6 @@ import {
   TextTitle,
   TitleButton,
 } from './styles';
-
-const titleMessage =
-  'Temos uma solução para cada etapa da sua carreira na medicina';
-const subTitleMessage =
-  'Existimos para te ajudar em cada passo dessa incrível missão de cuidar de vidas.';
-const titleButton = 'Começar Agora';
 
 const Onboarding = () => {
   const navigation = useNavigation();

@@ -119,20 +119,7 @@ exports[`renders correctly 1`] = `
           }
         >
           <View
-            accessibilityState={
-              Object {
-                "disabled": false,
-              }
-            }
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            icon="search"
           >
             <View
               style={

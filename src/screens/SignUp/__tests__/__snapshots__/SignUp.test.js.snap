@@ -290,32 +290,38 @@ exports[`renders correctly 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "rgba(255,255,255,0.5)",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
+        Array [
+          Object {
+            "color": "rgba(255,255,255,0.5)",
+            "fontSize": 13,
+            "fontWeight": "bold",
+          },
+        ]
       }
     >
       Ao clicar em
     </Text>
     <Text
       style={
-        Object {
-          "color": "#FFF",
-          "fontWeight": "bold",
-        }
+        Array [
+          Object {
+            "color": "#FFF",
+            "fontWeight": "bold",
+          },
+        ]
       }
     >
        "Finilizar Cadastro" 
     </Text>
     <Text
       style={
-        Object {
-          "color": "rgba(255,255,255,0.5)",
-          "fontSize": 13,
-          "fontWeight": "bold",
-        }
+        Array [
+          Object {
+            "color": "rgba(255,255,255,0.5)",
+            "fontSize": 13,
+            "fontWeight": "bold",
+          },
+        ]
       }
     >
       você estará aceitando também nossos termos e condições.

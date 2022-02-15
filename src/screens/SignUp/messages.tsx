@@ -1,40 +1,31 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Text, View } from 'react-native';
+import styled from 'styled-components/native';
 import { Themes } from '../../../themes/themes';
 
 type Props = {
   initialText: string;
   registerText: string;
   finishText: string;
-}
+};
+
+export const finishRegister = 'Finalizar Cadastro';
 
 export const Messages = ({ initialText, registerText, finishText }: Props) => {
   return (
     <>
-      <Text
-        style={styles.message}>
-        {initialText}
-      </Text>
-      <Text style={styles.register}>
-        {registerText}
-      </Text>
-      <Text
-        style={styles.message}>
-        {finishText}
-      </Text>
+      <MessageText>{initialText}</MessageText>
+      <RegisterText>{registerText}</RegisterText>
+      <MessageText>{finishText}</MessageText>
     </>
   );
 };
 
-const styles = StyleSheet.create({
-  message: {
-    fontSize: 13,
-    fontWeight: 'bold',
-    color: Themes.colors.whiteOpacity,
-  },
-  register:{
-    fontWeight: 'bold', 
-    color: Themes.colors.white
-  }
-})
+const MessageText = styled.Text`
+  font-size: 13px;
+  font-weight: bold;
+  color: ${Themes.colors.whiteOpacity};
+`;
+const RegisterText = styled.Text`
+  font-weight: bold;
+  color: ${Themes.colors.white};
+`;
