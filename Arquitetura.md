@@ -1,8 +1,9 @@
 # Sanar Intern Challenge Mobile
 
 
-<p align="center">
-  <img width="300" src="tela1.png"/>
+<p flex-direction: row; align="center">
+  <img width="300" src="tela1.gif"/>
+  <img width="300" src="tela2.gif"/>
 </p>
 
 
