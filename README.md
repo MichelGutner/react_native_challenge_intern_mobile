@@ -1,7 +1,7 @@
 # Sanar Intern Challenge Mobile
 
 <div align="center">
-  <img src="sanar_app_diagram.png" alt="Foto do Projeto Inicial" height="599" width="430"/>
+  <img src="sanar_app_diagram.png" alt="Foto do Projeto Inicial" height="499" width="499"/>
 </div>
 
 ## Estruturas de pastas
