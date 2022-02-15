@@ -14,9 +14,9 @@ import {
   Title,
 } from './styles';
 
-const ArticlesItem = item => {
+const ArticlesItem = (item: any) => {
   const navigation = useNavigation();
-  const { title, date, lang } = item.item;
+  const { title, date, lang, topics } = item.item;
   const [loader, setLoader] = useState(false);
 
   const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');
@@ -24,7 +24,6 @@ const ArticlesItem = item => {
   const openArticleItem = () => {
     setLoader(true);
     navigation.navigate('ArticleDetails', item);
-    setLoader(false);
     return;
   };
 

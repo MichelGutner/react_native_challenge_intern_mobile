@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, FlatList } from 'react-native';
+import { Alert, FlatList, StatusBar } from 'react-native';
 import { Header } from 'react-native-elements';
 import { Themes } from '../../../themes/themes';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
@@ -63,6 +63,10 @@ const Articles = () => {
   return (
     <Container>
       <Header
+        statusBarProps={{
+          backgroundColor: Themes.colors.backgroundSanar,
+          translucent: true,
+        }}
         containerStyle={{
           backgroundColor: Themes.colors.backgroundSanar,
         }}

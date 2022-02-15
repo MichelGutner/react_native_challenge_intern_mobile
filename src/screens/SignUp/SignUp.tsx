@@ -74,7 +74,7 @@ const SignUp = () => {
             setUserName(text);
           }}
           secureText={false}
-          isInputValid={false}
+          isInputValid={username}
           placeholder={'Digite seu nome'}
           placeholderTextColor={Themes.colors.white}
         />

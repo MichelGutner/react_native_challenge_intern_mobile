@@ -6,11 +6,7 @@ exports[`renders correctly 1`] = `
     Array [
       Object {
         "alignItems": "center",
-        "backgroundColor": "#0050f0",
-        "borderColor": "#ffffff",
         "borderRadius": 4,
-        "borderStyle": "solid",
-        "borderWidth": 1,
         "color": "white",
         "display": "flex",
         "fontFamily": "Roboto",
@@ -18,9 +14,8 @@ exports[`renders correctly 1`] = `
         "fontStyle": "normal",
         "fontWeight": "normal",
         "height": 48,
-        "marginTop": 16,
         "textAlign": "center",
-        "width": 312,
+        "width": 290,
       },
     ]
   }
