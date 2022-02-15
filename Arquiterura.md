@@ -18,6 +18,8 @@ https://stackoverflow.com/a/18812336/6273003
 
 # configurando telas principais
 
+utlização react native elements
+
 utilização de styled components
 
 componentes de renderizações

@@ -1,8 +1,9 @@
-import SearchArticles from '../../components/searchArticles/SearchArticles';
 import React, { useEffect, useState } from 'react';
-import { FlatList, ScrollView, Alert } from 'react-native';
+import { Alert, FlatList } from 'react-native';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
+import SearchArticles from '../../components/searchArticles/SearchArticles';
 import { getArticles } from '../../services/healthCareApi';
+import { Container } from './styles';
 
 const renderItem = ({ item }) => <ArticlesItem item={item} />;
 
@@ -21,15 +22,16 @@ const Articles = () => {
     );
   }, []);
 
+  console.log(articles.length);
   return (
-    <ScrollView>
+    <Container>
       <FlatList
         data={articles}
         keyExtractor={item => item.title}
         renderItem={renderItem}
       />
       <SearchArticles visible={searchArticles} />
-    </ScrollView>
+    </Container>
   );
 };
 
