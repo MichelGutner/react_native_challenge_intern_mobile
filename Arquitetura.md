@@ -57,7 +57,7 @@ https://regex101.com/
 https://stackoverflow.com/a/18812336/6273003
 
 ### inserindo logica de autenticação
-criação do usuario, e autenticação com login
+criação do usuario, e autenticação com login.
 
 1° consumo da API de login
 para utilização da autenticação por login, foi necessario implementar uma logica assincrona onde pega-se o componente doLoginRequest e verifica-se email e senha, se forem são valídos seu estado será OK, caso não FORBIDDEN, sabendo se o usuário foi autenticado ou não.
