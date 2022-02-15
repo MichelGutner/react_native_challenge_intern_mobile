@@ -1,7 +1,7 @@
 # Sanar Intern Challenge Mobile
 
 <div align="center">
-  <img src="sanar_app_diagram.png" alt="Foto do Projeto Inicial" height="599" width="599"/>
+  <img src="sanar_app_diagram.png" alt="Diagrama do Aplicativo" height="599" width="599"/>
 </div>
 
 ## Estruturas de pastas
@@ -77,6 +77,10 @@ Os testes foram adicionados para garantir que todos os valores capturados sejam 
 Testes unitários foram feitos para verificar e garantir o correto funcionamento da aplicação de forma automatizada. Nos permitindo fazer refatorações, novas funcionalidades e mudanças.
 
 **Cobertura de testes**
+
+<div align="center">
+  <img src="test_coverage.png" alt="Coverage test" height="599" width="499"/>
+</div>
 
 
 ## Icon and Splash

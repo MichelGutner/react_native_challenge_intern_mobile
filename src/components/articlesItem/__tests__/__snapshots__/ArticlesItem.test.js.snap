@@ -120,9 +120,11 @@ exports[`renders correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "red",
-            }
+            Array [
+              Object {
+                "color": "red",
+              },
+            ]
           }
         >
           
