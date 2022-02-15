@@ -1,7 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
 import { doCreateUser } from './../../services/loginAPI';
-
-
 
 type Props = {
   username: string;
@@ -29,4 +26,3 @@ export const doCreateRequest = async ({
     onError();
   }
 };
-

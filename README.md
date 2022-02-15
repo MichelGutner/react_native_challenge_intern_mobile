@@ -1,113 +1,79 @@
 # Sanar Intern Challenge Mobile
-Este é um desafio que vai ajudar a identificar seus pontos fortes como uma pessoa desenvolvedora mobile na Sanar.
 
 <div align="center">
-  <img src="screenshot_initial_project_mobile.png" alt="Foto do Projeto Inicial" height="599" width="430"/>
+  <img src="sanar_app_diagram.png" alt="Foto do Projeto Inicial" height="599" width="430"/>
 </div>
 
+## Estruturas de pastas
+cada tela 1 arquivo principal, 1 arquivo de estilos, 1 de logica quando se aplicar,
+arquivos que necessitam de testes, tera o arquivo test.
 
-`
-O objetivo desse desafio é construir um aplicativo utilizando a tecnologia React Native e com isso demonstrar suas habilidades técnicas e domínio do framework fazendo o uso dessa tecnologia.
-`
+o codigo foi divido em blocos components, rotas, telas, serviços, utils.
 
-## Problema: ❓
+### configurando telas principais
 
-As usuárias da sanar são super profissionais que desejam impactar e revolucionar a sáude do mundo, para isso será necessário que elas estudem bastante
-com os artigos mais renomados publicados na revista HealthCare, essa revista publica varios artigos e o recomendado é que as profissionais realizem uma leitura diária. Porém elas estão ocupadas em suas rotinas que podem ser dentro de salas de aulas, realizando a residência médica ou realizando atendimentos, com isso elas estão longe de seus escritórios ou local de estudos e não estão conseguindo se atualizar. Nossa super PO e lideranças estratégicas identificaram que um novo produto, sendo mais específico uma App pode resolver essa dor.
+utlização react native elements
+para configuração da tela de artigos com header estilizado.
 
-## Solução 🚀
+utilização de biblioteca styled components - para evitar conflitos de nomes em estilizações e eliminação de bugs no momento de criação.
 
-Criar um aplicativo que organize a leitura dos artigos da revista HealthCare.
+criação temas e cores
+1° design de temas e cores das 3 principais telas foi obtido atraves da plataforma figma 
+https://www.figma.com/file/U67le6ZsSSb0XOgU4F7COC/Est%C3%A1gio-%2F-2022.1?node-id=0%3A1
+as demais foram desenvolvida visando uma mairo facilidade de entendimento do usuário(a).
 
-## Instruções 📖
+2° componentes - criado para uma melhor legibilidade, facilidade no entendimento, reaproveitamento
 
-* Prefira realizar o seu próprio código do que utilizar bibliotecas ou componentes prontos.
-* Fazer o uso dos artigos da API: 'https://www.healthcare.gov/api/articles.json'.
-* Sua solução deve ter no mínimo 3 telas tela obrigátorios que estão disponíveis no nesse figma https://www.figma.com/file/U67le6ZsSSb0XOgU4F7COC/Est%C3%A1gio-%2F-2022.1?node-id=2%3A274 e ao menos mais 1 tela de livre escolha e no máximo 2 para organização dos artigos.
+3° camadas bussiness - foi criada para separação das funções da tela principal para um codigo mais limpo e mais organizado.
 
-### Tecnologias
-* Precisamos que você faça essa etapa utilizando o framework do React Native.
+4° criação utils - armazenar todas nossas funções de validações em um arquivo separado.
 
-### Telas A serem desenvolvidas
-1. Boas Vindas
-2. Login
-3. Registro
-4. Primeira tela de artigos (Bônus)
-5. Segunda tela de artigos  (Bônus)
+### configuração ambiente testes
+para configurar o ambiente de teste
+foi utilizados algumas referências:
 
-#### Regras de validação do campo de senha 🔑
-1. Pelo menos 1 caractere maiúsculo.
-2. Pelo menos 1 caractere minúsculo.
-3. Pelo menos 1 dígito.
-4. Pelo menos 1 caractere especial.
-5. Mínimo de 8 caracteres.
+1° https://www.reactnativeschool.com/setup-jest-tests-with-react-navigation
 
-#### Regras de validação do campo do email 📧
-1. @ simbolo.
-2. Nome do domínio (Ex: sanar.com).
-3. Nome do receptor (Ex: developer).
-4. Digitos de 0 até 9
-5. apenas os caracteres especiais: Ponto (.), Underline (_), Hífen (-) e Mais (+).
+2° configuração do ambiente de teste com jest
+utilização da documentação para resolver o problema jest-config-is-throwing-type-errorhandler-error-mixed-isfatal-boolean
+https://stackoverflow.com/questions/66652403/
 
-### Recomendações 🌈
-* Você deve usar os métodos do arquivo loginAPI para criar uma nova usuária ⭐️
-* Você deve usar os métodos do arquivo loginAPI para realizar a autenticação do login ⭐️
-* Você deve usar a API da HealthCare do governo dos USA como nossa provedora de artigos https://www.healthcare.gov/api/articles.json ⭐️
-* Faça o uso de bibliotecas como Axios ou Fetch para requisições http ⭐️
-* Codem pensando na melhor experiência da usuária ♥️
+3°utilização da documentação para resolver problema de mocks na biblioteca de navegação
+https://reactnavigation.org/docs/testing/
 
-## Entrega 📦
+### inserindo autenticadores
+1° verificação com authenticadores para uma melhor performace
+para que o usuário(a) consiga acessar os conteudos de artigos ele precisa se cadastrar e autenticar seu login com os dados validos, pois os autenticadores bloquearam seu acesso caso o seu login não seja valido.
 
-* Criar uma conta no GitHub e fazer um fork desse projeto 1️⃣
-* Commitar o código fonte 2️⃣
-* Dar acesso as pessoas: @csmonteiro @jacksonsmith, @hellintonklein, @RaiVolt. Para realizare a revisão de código 3️⃣
+1° para inserção dos autenticadores utilizamos regex,
+algumas referências utilizadas.
+https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail
+https://support.bettercloud.com/s/article/Creating-your-own-Custom-Regular-Expression-bc72153
 
-## Dependências 🏬
+utilização da plataforma regex para validar os campos de email e senha com padrões regex.
+https://regex101.com/
 
-* Node v16.11.1 (recomendo instalar via [NVM](https://github.com/creationix/nvm))
-* [React Native Cli](https://www.npmjs.com/package/react-native-cli)
-* [NPM](https://www.npmjs.com/)
-* [Yarn](https://yarnpkg.com)  (Opcional apenas se não quiser utilizar o NPM)
-* [Cocoa Pods - Apenas iOS](https://cocoapods.org/)
+3° pesquisa para resolução de problemas com regex.
+https://stackoverflow.com/a/18812336/6273003
 
+### inserindo logica de autenticação
+criação do usuario, e autenticação com login
 
-#### Instalar dependências 🏗
+1° consumo da API de login
+para utilização da autenticação por login, foi necessario implementar uma logica assincrona onde pega-se o componente doLoginRequest e verifica-se email e senha, se forem são valídos seu estado será OK, caso não FORBIDDEN, sabendo se o usuário foi autenticado ou não.
 
-Em um terminal:
+a criação de usuário foi necessário utlizar lógica assincrona onde pega-se o componente doCreateUser faz o input dos dados utilizados no campo de verificação caso retorne o estado OK, todos os dados estão validos sera criado o usuário.
 
-```bash
-Android
-npm install # instalar dependências
-npm run android # iniciar o metro bundler + abrir simulador android
+## testes unitarios 
+criação snapshots
+verificar e clonar as telas, para caso a tela seja alterada o teste acusar.
+fornecer valor adicional e tornar os testes mais fáceis.
 
-iOS
-npm install # instalar dependências
-cd ios && npx pod-install
-npm run ios # iniciar o metro bundler + abrir simulador iOS
-npm test # executar testes unitários
-```
+criação testes componentes dologin e docreateUser
+verificar se as funções estão sendo chamadas apos chamar a função de validação dos campos de email, e senha.
 
-Ou...
+#### Icon and Splash
+inserção icon and splash_screen
 
-
-```bash
-Android
-yarn # instalar dependências
-yarn android # iniciar o metro bundler + abrir simulador android
-
-iOS
-yarn # instalar dependências
-cd ios && npx pod-install
-yarn ios # iniciar o metro bundler + abrir simulador iOS
-yarn test # executar testes unitários
-```
-
-## Dicas ⌨️
-
-* Um código bem organizado e seguindo algum padrão de projeto é sempre bem vindo
-* A capacidade de criar interfaces utilizando boas praticas é sempre um diferencial interessante
-* Fique a vontade para inovar ou mostrar as coisas que você mais goste
-* Se divirta
-* Qualquer problema entre em contato com a gente.
-
-## Boa Sorte! 🍀🍀🍀🍀
+## bugs
+apis não está olhando para email está somente olhando somente para senha

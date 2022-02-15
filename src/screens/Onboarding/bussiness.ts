@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/native';
 export const titleMessage =
   'Temos uma solução para cada etapa da sua carreira na medicina';
 export const subTitleMessage =

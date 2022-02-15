@@ -4,7 +4,8 @@ import { Alert } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import { InputValidation } from '../../components/InputValidation/InputValidation';
 import Loading from '../../components/loading/Loading';
-import { doCreateRequest, onPressRegisterButtonGoBack } from './bussiness';
+import { validationEmail, validationPassword } from '../../utils/Validation';
+import { doCreateRequest } from './bussiness';
 import { finishRegister, Messages } from './messages';
 import {
   ButtonRegister,
@@ -14,7 +15,6 @@ import {
   RegisterTextAlert,
   TitleButtonRegister,
 } from './styles';
-import { validationEmail, validationPassword } from '../../utils/Validation';
 
 const SignUp = () => {
   const navigation = useNavigation();
