@@ -1,6 +1,10 @@
 # Sanar Intern Challenge Mobile
 
 <div align="center">
+  <img src="tela1.gif" width="128"/>
+</div>
+
+<div align="center">
   <img src="sanar_app_diagram.png" alt="Diagrama do Aplicativo" height="599" width="599"/>
 </div>
 
