@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, FlatList } from 'react-native';
+import { Header } from 'react-native-elements';
+import { Themes } from '../../../themes/themes';
 import ArticlesItem from '../../components/articlesItem/ArticlesItem';
 import SearchArticles from '../../components/searchArticles/SearchArticles';
 import { getArticles } from '../../services/healthCareApi';
-import { Container } from './styles';
+import { ArticlesLenght, Container } from './styles';
 
-const renderItem = ({ item }) => <ArticlesItem item={item} />;
+const renderItem = ({ item }: any) => <ArticlesItem item={item} />;
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
-  const [searchArticles, setSearchArticles] = useState(false);
 
   useEffect(() => {
     getArticles(
@@ -22,15 +23,31 @@ const Articles = () => {
     );
   }, []);
 
-  console.log(articles.length);
+  const articlesLength = articles.length;
+
   return (
     <Container>
+      <Header
+        containerStyle={{
+          backgroundColor: Themes.colors.backgroundSanar,
+        }}
+        placement="left"
+        leftComponent={
+          <ArticlesLenght>
+            {articlesLength + ' Artigos encontrado'}
+          </ArticlesLenght>
+        }
+        centerComponent={<SearchArticles />}
+        rightComponent={{
+          icon: 'search',
+          color: '#fff',
+        }}
+      />
       <FlatList
         data={articles}
-        keyExtractor={item => item.title}
+        keyExtractor={item => item.title.toString()}
         renderItem={renderItem}
       />
-      <SearchArticles visible={searchArticles} />
     </Container>
   );
 };

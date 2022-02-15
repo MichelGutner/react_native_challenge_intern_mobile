@@ -2,7 +2,12 @@ import React from 'react';
 import HTMLView from 'react-native-htmlview';
 import { Container, Content, Title } from './styles';
 
-const ArticleDetails = props => {
+interface Type {
+  route: Parameters;
+  params: Parameters;
+}
+
+const ArticleDetails: React.FC<Type> = props => {
   const article = props.route.params.item;
 
   return (

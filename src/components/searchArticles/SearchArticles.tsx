@@ -1,16 +1,16 @@
 import React from 'react';
-import { Modal, ModalProps } from 'react-native';
-import { Container } from './styles';
+import { Themes } from '../../../themes/themes';
+import { Container, TextInput } from './styles';
 
-interface Props extends ModalProps {
-  visible: boolean;
-}
-
-const SearchArticles = ({ visible }: Props) => {
+const SearchArticles = () => {
   return (
-    <Modal visible={visible} animationType={'slide'}>
-      <Container></Container>
-    </Modal>
+    <Container>
+      <TextInput
+        maxLength={15}
+        placeholder="Buscar..."
+        placeholderTextColor={Themes.colors.white}
+      />
+    </Container>
   );
 };
 

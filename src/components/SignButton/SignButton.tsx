@@ -26,7 +26,11 @@ const TitleButton = styled.Text`
   color: ${Themes.colors.backgroundSanar};
 `;
 
-const SignButton = ({ title, ...rest }) => {
+type TextProps = {
+  title: string;
+};
+
+const SignButton = ({ title, ...rest }: TextProps) => {
   return (
     <Button {...rest}>
       <TitleButton>{title}</TitleButton>

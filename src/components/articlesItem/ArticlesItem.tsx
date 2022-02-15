@@ -12,7 +12,7 @@ import {
   Title,
 } from './styles';
 
-const ArticlesItem = item => {
+const ArticlesItem = (item: any) => {
   const navigation = useNavigation();
   const { title, date, lang } = item.item;
   const [loader, setLoader] = useState(false);

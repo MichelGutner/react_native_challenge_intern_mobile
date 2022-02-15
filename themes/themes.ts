@@ -6,5 +6,6 @@ export const Themes = {
     subTitleOnBoarding: '#414545',
     buttonOnboarding: '#0050F0',
     whiteOpacity: 'rgba(255,255,255,0.5)',
+    almostTransparent: 'rgba(255,255,255, 0.08)',
   },
 };
