@@ -1,4 +1,4 @@
-import SanarLogoNegativo from '../SanarLogo/LogoNegativo/LogoNegativo';
+import SanarLogoNegativo from '../LogoNegativo/LogoNegativo';
 import React from 'react';
 import { ActivityIndicator, ModalProps, StatusBar } from 'react-native';
 import { Themes } from '../../../themes/themes';

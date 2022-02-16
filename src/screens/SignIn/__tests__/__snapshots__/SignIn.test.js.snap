@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../src/components/SanarLogo/LogoNegativo/Logo-negativo.png",
+          "testUri": "../../../src/components/LogoNegativo/Logo-negativo.png",
         }
       }
       style={
@@ -57,7 +57,7 @@ exports[`renders correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../src/components/SanarLogo/SanarProfile/profile.png",
+          "testUri": "../../../src/components/SanarProfile/profile.png",
         }
       }
       style={

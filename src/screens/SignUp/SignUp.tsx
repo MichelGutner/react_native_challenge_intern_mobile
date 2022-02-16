@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import SanarLogoNegativo from '../../components/SanarLogo/LogoNegativo/LogoNegativo';
+import SanarLogoNegativo from '../../components/LogoNegativo/LogoNegativo';
 import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import { Themes } from '../../../themes/themes';

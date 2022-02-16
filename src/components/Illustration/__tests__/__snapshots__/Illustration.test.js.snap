@@ -4,14 +4,14 @@ exports[`renders correctly 1`] = `
 <Image
   source={
     Object {
-      "testUri": "../../../src/components/SanarLogo/SanarLogo/logo-sanar.png",
+      "testUri": "../../../src/components/Illustration/illustration.png",
     }
   }
   style={
     Array [
       Object {
-        "height": 45,
-        "width": 152,
+        "height": 202,
+        "width": 360,
       },
     ]
   }

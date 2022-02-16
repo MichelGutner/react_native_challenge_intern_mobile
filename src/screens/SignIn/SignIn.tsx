@@ -17,8 +17,8 @@ import {
   SignUpTouchable,
   TitleSignUpTouchable,
 } from './styles';
-import SanarLogoNegativo from '../../components/SanarLogo/LogoNegativo/LogoNegativo';
-import SanarProfileLogo from '../../components/SanarLogo/SanarProfile/SanarProfileLogo';
+import SanarLogoNegativo from '../../components/LogoNegativo/LogoNegativo';
+import SanarProfileLogo from '../../components/SanarProfile/SanarProfileLogo';
 
 const messageRegister = 'Não possui um acesso?';
 const messageRegisterButton = 'Cadastre-se aqui';
