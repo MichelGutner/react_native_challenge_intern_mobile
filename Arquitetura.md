@@ -86,7 +86,7 @@ Testes unitários foram feitos para verificar e garantir o correto funcionamento
 **Cobertura de testes**
 
 <div align="center">
-  <img src="test_coverage.png" alt="Coverage test" height="599" width="499"/>
+  <img src="screenshots\test_coverage.png" alt="Coverage test" height="599" width="499"/>
 </div>
 
 
