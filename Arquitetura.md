@@ -3,7 +3,7 @@
 
 <p flex-direction: row; align="center">
   <img width="300" src="screenshots\tela1.gif"/>
-  <img width="300" src="screenshots\tela1.gif"/>
+  <img width="300" src="screenshots\tela2.gif"/>
 </p>
 
 
