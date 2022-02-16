@@ -1,3 +1,4 @@
+import SanarLogoNegativo from '../../components/SanarLogo/LogoNegativo';
 import React from 'react';
 import { ActivityIndicator, ModalProps, StatusBar } from 'react-native';
 import { Themes } from '../../../themes/themes';
@@ -12,9 +13,9 @@ const Loading = ({ visible }: Modal) => {
     <Modal visible={visible}>
       <ViewContainer>
         <StatusBar barStyle="light-content" />
-        <ImageLogoSignIn
-          source={require('../../components/SanarLogo/Logo-negativo.png')}
-        />
+        <ImageLogoSignIn>
+          <SanarLogoNegativo />
+        </ImageLogoSignIn>
         <ActivityIndicator size={35} color={Themes.colors.white} animating />
       </ViewContainer>
     </Modal>

@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import Loading from '../../components/loading/Loading';
+import Loading from '../../components/Loading/Loading';
 import React, { useState } from 'react';
 import { Alert, StatusBar, Text } from 'react-native';
 import { Themes } from '../../../themes/themes';
@@ -17,6 +17,8 @@ import {
   SignUpTouchable,
   TitleSignUpTouchable,
 } from './styles';
+import SanarLogoNegativo from '../../components/SanarLogo/LogoNegativo';
+import SanarProfileLogo from '../../components/SanarLogo/SanarProfileLogo';
 
 const messageRegister = 'Não possui um acesso?';
 const messageRegisterButton = 'Cadastre-se aqui';
@@ -73,13 +75,12 @@ const SignIn = () => {
   return (
     <Container>
       <StatusBar barStyle="light-content" />
-      <ImageLogoSignIn
-        source={require('../../components/SanarLogo/Logo-negativo.png')}
-        resizeMode="contain"
-      />
-      <ImageProfile
-        source={require('../../components/SanarLogo/profile.png')}
-      />
+      <ImageLogoSignIn>
+        <SanarLogoNegativo />
+      </ImageLogoSignIn>
+      <ImageProfile>
+        <SanarProfileLogo />
+      </ImageProfile>
       <InputAreaView>
         <InputValidation
           value={email}

@@ -9,16 +9,12 @@ export const Container = styled.SafeAreaView`
   background-color: ${Themes.colors.white};
 `;
 
-export const ImageLogoOnboarding = styled.Image`
-  position: absolute;
-  width: 152px;
-  height: 45px;
+export const ImageLogoOnboarding = styled.View`
   left: 104px;
   top: 64px;
 `;
 
 export const TextTitle = styled.Text`
-  position: absolute;
   width: 328px;
   height: 55px;
   left: 16px;
@@ -36,11 +32,10 @@ export const TextTitle = styled.Text`
 `;
 
 export const TextSubTitle = styled.Text`
-  position: absolute;
   width: 328px;
   height: 44px;
   left: 16px;
-  top: 212px;
+  top: 170px;
 
   font-family: Red Hat Display;
   font-style: normal;
@@ -50,19 +45,15 @@ export const TextSubTitle = styled.Text`
   text-align: center;
 `;
 
-export const IllustrationImage = styled.Image`
-  position: absolute;
-  width: 360px;
-  height: 202px;
-  top: 280px;
+export const IllustrationImage = styled.View`
+  top: 200px;
 `;
 
 export const OnboardingButton = styled.TouchableOpacity<TouchableType>`
-  position: absolute;
   width: 312px;
   height: 48px;
   left: 24px;
-  top: 552px;
+  top: 282px;
   align-items: center;
   justify-content: center;
 

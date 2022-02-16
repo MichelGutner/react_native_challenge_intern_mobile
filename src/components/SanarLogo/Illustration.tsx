@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet } from 'react-native';
 
-class SanarLogo extends Component {
+class Illustration extends Component {
   render() {
     return (
       <Image
-        source={require('./LogosImage/logo-sanar.png')}
+        source={require('./LogosImage/illustration.png')}
         style={styles.image}
       />
     );
   }
 }
 
-export default SanarLogo;
+export default Illustration;
 
 const styles = StyleSheet.create({
-  image: {
-      width: 152, 
-      height: 45
-  }
+    image: {
+        width: 360, 
+        height: 202
+    }
 })

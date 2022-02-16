@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, FlatList } from 'react-native';
+import { Alert, FlatList } from 'react-native';
 import { Header } from 'react-native-elements';
 import { Themes } from '../../../themes/themes';
-import ArticlesItem from '../../components/articlesItem/ArticlesItem';
-import SearchArticles from '../../components/searchArticles/SearchArticles';
+import ArticlesItem from '../../components/ArticlesItem/ArticlesItem';
+import SearchArticles from '../../components/SearchArticles/SearchArticles';
 import { getArticles } from '../../services/healthCareApi';
 import { Activity, ArticlesLenght, Container } from './styles';
 

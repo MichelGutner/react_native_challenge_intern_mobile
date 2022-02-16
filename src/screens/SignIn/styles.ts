@@ -6,13 +6,13 @@ export const Container = styled.SafeAreaView`
   background-color: ${Themes.colors.backgroundSanar};
 `;
 
-export const ImageLogoSignIn = styled.Image`
+export const ImageLogoSignIn = styled.View`
   width: 152px;
   height: 45px;
   left: 104px;
   margin-top: 96px;
 `;
-export const ImageProfile = styled.Image`
+export const ImageProfile = styled.View`
   width: 94px;
   height: 94px;
   left: 133px;

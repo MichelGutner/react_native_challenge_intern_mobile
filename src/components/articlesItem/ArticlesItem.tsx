@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-import Loading from '../../components/loading/Loading';
+import Loading from '../Loading/Loading';
 import {
   BottomBody,
   Container,
@@ -16,7 +16,7 @@ import {
 
 const ArticlesItem = (item: any) => {
   const navigation = useNavigation();
-  const { title, date, lang, topics } = item.item;
+  const { title, date, lang } = item.item;
   const [loader, setLoader] = useState(false);
 
   const formatDate = date.replace(/00:00:00/g, '').replace(/\+0000/g, '');

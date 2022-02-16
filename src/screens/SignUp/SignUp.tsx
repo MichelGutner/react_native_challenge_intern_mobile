@@ -1,12 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
+import SanarLogoNegativo from '../../components/SanarLogo/LogoNegativo';
 import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import { Themes } from '../../../themes/themes';
 import { InputValidation } from '../../components/InputValidation/InputValidation';
-import Loading from '../../components/loading/Loading';
+import Loading from '../../components/Loading/Loading';
+import { ThreeMessages } from '../../components/ThreeMessages/ThreeMessages';
 import { validationEmail, validationPassword } from '../../utils/Validation';
 import { doCreateRequest } from './bussiness';
-import { finishRegister, Messages } from './messages';
 import {
   ButtonRegister,
   Container,
@@ -26,6 +27,7 @@ const SignUp = () => {
   const onPressRegisterButtonGoBack = () => {
     navigation.navigate('SignIn');
   };
+  const finishRegister = 'Finalizar Cadastro';
 
   const onSuccess = () => {
     setLoading(false);
@@ -64,9 +66,9 @@ const SignUp = () => {
 
   return (
     <Container>
-      <ImageLogoSignUp
-        source={require('../../components/SanarLogo/Logo-negativo.png')}
-      />
+      <ImageLogoSignUp>
+        <SanarLogoNegativo />
+      </ImageLogoSignUp>
       <InputAreaView>
         <InputValidation
           value={username}
@@ -103,7 +105,7 @@ const SignUp = () => {
         <TitleButtonRegister>{finishRegister}</TitleButtonRegister>
       </ButtonRegister>
       <RegisterTextAlert>
-        <Messages
+        <ThreeMessages
           initialText={'Ao clicar em'}
           registerText={' "Finilizar Cadastro" '}
           finishText={'você estará aceitando também nossos termos e condições.'}

@@ -14,13 +14,7 @@ exports[`renders correctly 1`] = `
     ]
   }
 >
-  <Image
-    resizeMode="contain"
-    source={
-      Object {
-        "testUri": "../../../src/components/SanarLogo/Logo-negativo.png",
-      }
-    }
+  <View
     style={
       Array [
         Object {
@@ -31,13 +25,22 @@ exports[`renders correctly 1`] = `
         },
       ]
     }
-  />
-  <Image
-    source={
-      Object {
-        "testUri": "../../../src/components/SanarLogo/profile.png",
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/components/SanarLogo/LogosImage/Logo-negativo.png",
+        }
       }
-    }
+      style={
+        Object {
+          "height": 45,
+          "width": 152,
+        }
+      }
+    />
+  </View>
+  <View
     style={
       Array [
         Object {
@@ -48,7 +51,21 @@ exports[`renders correctly 1`] = `
         },
       ]
     }
-  />
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/components/SanarLogo/LogosImage/profile.png",
+        }
+      }
+      style={
+        Object {
+          "height": 94,
+          "width": 94,
+        }
+      }
+    />
+  </View>
   <View
     style={
       Array [

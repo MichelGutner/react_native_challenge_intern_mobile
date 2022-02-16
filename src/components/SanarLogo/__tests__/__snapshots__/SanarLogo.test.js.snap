@@ -4,7 +4,7 @@ exports[`renders correctly 1`] = `
 <Image
   source={
     Object {
-      "testUri": "../../../src/components/SanarLogo/logo-sanar.png",
+      "testUri": "../../../src/components/SanarLogo/LogosImage/logo-sanar.png",
     }
   }
   style={

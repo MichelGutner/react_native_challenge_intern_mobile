@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
-import SignInputs from '../../components/Inputs/SignInputs';
-import { Container } from './styles';
+import { Container, Input } from './styles';
 
 type Props = {
   value: string;
@@ -22,7 +21,7 @@ export const InputValidation = ({
 }: Props) => {
   return (
     <Container>
-      <SignInputs
+      <Input
         placeholderTextColor={placeholderTextColor}
         placeholder={placeholder}
         value={value}

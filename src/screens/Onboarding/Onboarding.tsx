@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
+import SanarLogo from '../../components/SanarLogo/SanarLogo';
 import React from 'react';
 import { subTitleMessage, titleButton, titleMessage } from './bussiness';
 import {
@@ -10,6 +11,7 @@ import {
   TextTitle,
   TitleButton,
 } from './styles';
+import Illustration from '../../components/SanarLogo/Illustration';
 
 const Onboarding = () => {
   const navigation = useNavigation();
@@ -20,16 +22,14 @@ const Onboarding = () => {
 
   return (
     <Container>
-      <ImageLogoOnboarding
-        source={require('../../components/SanarLogo/logo-sanar.png')}
-        resizeMode="contain"
-      />
+      <ImageLogoOnboarding>
+        <SanarLogo />
+      </ImageLogoOnboarding>
       <TextTitle>{titleMessage}</TextTitle>
       <TextSubTitle>{subTitleMessage}</TextSubTitle>
-      <IllustrationImage
-        source={require('../../components/SanarLogo/illustration.png')}
-        resizeMode="contain"
-      />
+      <IllustrationImage>
+        <Illustration />
+      </IllustrationImage>
       <OnboardingButton onPress={onPressGoSignInButton}>
         <TitleButton>{titleButton}</TitleButton>
       </OnboardingButton>

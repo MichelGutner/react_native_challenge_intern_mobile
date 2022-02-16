@@ -6,7 +6,7 @@ export const Container = styled.SafeAreaView`
   background-color: ${Themes.colors.backgroundSanar};
 `;
 
-export const ImageLogoSignUp = styled.Image`
+export const ImageLogoSignUp = styled.View`
   width: 152px;
   height: 45px;
   left: 104px;

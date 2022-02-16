@@ -5,7 +5,7 @@ export const Modal = styled.Modal`
   flex: 1;
 `;
 
-export const ImageLogoSignIn = styled.Image`
+export const ImageLogoSignIn = styled.View`
   position: absolute;
   width: 152px;
   height: 45px;
