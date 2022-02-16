@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import SanarLogo from '../../components/SanarLogo/SanarLogo';
+import SanarLogo from '../../components/SanarLogo/SanarLogo/SanarLogo';
 import React from 'react';
 import { subTitleMessage, titleButton, titleMessage } from './bussiness';
 import {
@@ -11,7 +11,7 @@ import {
   TextTitle,
   TitleButton,
 } from './styles';
-import Illustration from '../../components/SanarLogo/Illustration';
+import Illustration from '../../components/SanarLogo/Illustration/Illustration';
 
 const Onboarding = () => {
   const navigation = useNavigation();
