@@ -44,14 +44,16 @@ exports[`renders correctly 1`] = `
       <Image
         source={
           Object {
-            "testUri": "../../../src/components/SanarLogo/LogosImage/Logo-negativo.png",
+            "testUri": "../../../src/components/SanarLogo/LogoNegativo/Logo-negativo.png",
           }
         }
         style={
-          Object {
-            "height": 45,
-            "width": 152,
-          }
+          Array [
+            Object {
+              "height": 45,
+              "width": 152,
+            },
+          ]
         }
       />
     </View>

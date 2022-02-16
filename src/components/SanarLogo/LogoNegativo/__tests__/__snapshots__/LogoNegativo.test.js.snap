@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/components/SanarLogo/LogoNegativo/Logo-negativo.png",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 45,
+        "width": 152,
+      },
+    ]
+  }
+/>
+`;

@@ -27,14 +27,16 @@ exports[`renders correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../src/components/SanarLogo/LogosImage/logo-sanar.png",
+          "testUri": "../../../src/components/SanarLogo/SanarLogo/logo-sanar.png",
         }
       }
       style={
-        Object {
-          "height": 45,
-          "width": 152,
-        }
+        Array [
+          Object {
+            "height": 45,
+            "width": 152,
+          },
+        ]
       }
     />
   </View>
@@ -91,14 +93,16 @@ exports[`renders correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../src/components/SanarLogo/LogosImage/illustration.png",
+          "testUri": "../../../src/components/SanarLogo/Illustration/illustration.png",
         }
       }
       style={
-        Object {
-          "height": 202,
-          "width": 360,
-        }
+        Array [
+          Object {
+            "height": 202,
+            "width": 360,
+          },
+        ]
       }
     />
   </View>

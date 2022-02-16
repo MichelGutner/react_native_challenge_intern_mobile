@@ -8,7 +8,7 @@
 
 
 <div align="center">
-  <img src="sanar_app_diagram.png" alt="Diagrama do Aplicativo" height="599" width="599"/>
+  <img src="screenshots\sanar_app_diagram.png" alt="Diagrama do Aplicativo" height="599" width="599"/>
 </div>
 
 ## Estruturas de pastas
